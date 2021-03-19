@@ -1,0 +1,221 @@
+body {
+  background-color: #f2f2f2;
+}
+
+.navStyle {
+  background-color: #f2cc0f !important;
+}
+
+.navStyle:hover {
+  opacity: 0.8;
+}
+
+.logo {
+  width: 255px;
+}
+
+.nav-btn {
+  font-family: 'Henny Penny', cursive;
+  font-weight: 600;
+  text-align: center;
+}
+
+.nav-btn img {
+  padding-bottom: 10px;
+}
+
+.nav-btn div {
+  max-width: 100%;
+  min-height: 10px;
+}
+
+.nav-btn div div:nth-child(2) a {
+  border-radius: 30px;
+  padding: 5px;
+  border: 3px solid #f2f2f2;
+  background-color: #ffffff;
+  text-decoration: none;
+  color: #9453A6;
+}
+
+.nav-btn div div:nth-child(2) a:hover {
+  -webkit-transition: all ease-in-out 2s;
+  transition: all ease-in-out 2s;
+}
+
+.nav-btn div div:nth-child(2) a:active {
+  -webkit-transition: all 2s ease-in-out;
+  transition: all 2s ease-in-out;
+}
+
+.nav-btn div div:nth-child(2):active {
+  -webkit-transform: scaleX(1.2);
+          transform: scaleX(1.2);
+}
+
+.nav-btn div div:nth-child(3) a {
+  border-radius: 30px;
+  padding: 5px;
+  border: 3px solid #f2f2f2;
+  background-color: #ffffff;
+  text-decoration: none;
+  color: #8CBF3F;
+}
+
+.nav-btn div div:nth-child(3) a:hover {
+  -webkit-transition: all ease-in-out 2s;
+  transition: all ease-in-out 2s;
+}
+
+.nav-btn div div:nth-child(3) a:active {
+  -webkit-transition: all 2s ease-in-out;
+  transition: all 2s ease-in-out;
+}
+
+.nav-btn div div:nth-child(3):active {
+  -webkit-transform: scaleX(1.2);
+          transform: scaleX(1.2);
+}
+
+.nav-btn div div:nth-child(4) a {
+  border-radius: 30px;
+  padding: 5px;
+  border: 3px solid #f2f2f2;
+  background-color: #ffffff;
+  text-decoration: none;
+  color: #F2CC0F;
+}
+
+.nav-btn div div:nth-child(4) a:hover {
+  -webkit-transition: all ease-in-out 2s;
+  transition: all ease-in-out 2s;
+}
+
+.nav-btn div div:nth-child(4) a:active {
+  -webkit-transition: all 2s ease-in-out;
+  transition: all 2s ease-in-out;
+}
+
+.nav-btn div div:nth-child(4):active {
+  -webkit-transform: scaleX(1.2);
+          transform: scaleX(1.2);
+}
+
+.nav-btn div div:nth-child(5) a {
+  border-radius: 30px;
+  padding: 5px;
+  border: 3px solid #f2f2f2;
+  background-color: #ffffff;
+  text-decoration: none;
+  color: #9453A6;
+}
+
+.nav-btn div div:nth-child(5) a:hover {
+  -webkit-transition: all ease-in-out 2s;
+  transition: all ease-in-out 2s;
+}
+
+.nav-btn div div:nth-child(5) a:active {
+  -webkit-transition: all 2s ease-in-out;
+  transition: all 2s ease-in-out;
+}
+
+.nav-btn div div:nth-child(5):active {
+  -webkit-transform: scaleX(1.2);
+          transform: scaleX(1.2);
+}
+
+.nav-btn div div:nth-child(6) label {
+  cursor: pointer;
+  border: 3px solid #f0e68b;
+  border-radius: 30px;
+  padding: 5px;
+}
+
+.nav-btn div div:nth-child(6) label:active {
+  -webkit-transform: scaleX(1.2);
+          transform: scaleX(1.2);
+}
+
+.nav-btn div div:nth-child(6) .inputSrc {
+  margin-top: 17px;
+  width: 220px;
+  border: 3px solid #f0e68b;
+  border-radius: 30px;
+  outline: none;
+}
+
+.textSlider {
+  font-family: 'Henny Penny', cursive;
+  color: #9453a6d7 !important;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 3em;
+}
+
+.slider {
+  z-index: 2;
+  background-color: black;
+}
+
+.opas {
+  opacity: 0.8 !important;
+  z-index: 1;
+}
+
+.sliderPng {
+  height: 550px;
+  background-image: url(../../img/slider/1.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.sliderPng2 {
+  height: 540px;
+  background-image: url(../../img/slider/2.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.sliderPng3 {
+  height: 540px;
+  background-image: url(../../img/slider/3.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.sliderPng4 {
+  height: 540px;
+  background-image: url(../../img/slider/4.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.sliderPng5 {
+  height: 540px;
+  background-image: url(../../img/slider/2.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.menu {
+  height: 350px;
+  background-color: #9453A6;
+}
+
+.menu .imgBernard {
+  text-align: center;
+  height: 300px;
+  width: 300px;
+  border-radius: 10px;
+  background-color: white;
+}
+/*# sourceMappingURL=menu.css.map */
