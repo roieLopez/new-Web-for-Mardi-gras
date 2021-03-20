@@ -3,11 +3,33 @@ body {
 }
 
 .navStyle {
-  background-color: #f2cc0f !important;
+  background-color: #0d0d0d !important;
+  font-family: 'Henny Penny', cursive;
 }
 
 .navStyle:hover {
   opacity: 0.8;
+}
+
+.navStyle .navTextColor {
+  color: #6453a6 !important;
+  font-weight: 700;
+}
+
+.navStyle .navTextColor2 {
+  color: #8cbf3f !important;
+}
+
+.navStyle .navTextColor3 {
+  color: #f2cc0f !important;
+}
+
+.navStyle .navTextColor4 {
+  color: #6453a6 !important;
+}
+
+.navStyle .navTextColor5 {
+  color: #8cbf3f !important;
 }
 
 .logo {
@@ -145,9 +167,13 @@ body {
   outline: none;
 }
 
+.nav-item {
+  margin-left: 25px !important;
+}
+
 .textSlider {
   font-family: 'Henny Penny', cursive;
-  color: #9453a6d7 !important;
+  color: #f2cc0f !important;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -207,15 +233,28 @@ body {
 }
 
 .menu {
-  height: 350px;
-  background-color: #9453A6;
+  height: 400px;
+  background-color: #f2f2f2;
+  min-width: 100% !important;
+  border: 1px solid black;
 }
 
 .menu .imgBernard {
-  text-align: center;
-  height: 300px;
-  width: 300px;
-  border-radius: 10px;
-  background-color: white;
+  height: 400px;
+}
+
+.menu .imgBernard img {
+  width: 150px;
+  margin-top: 20px;
+}
+
+.menu .imgBernard .fontMenu {
+  font-size: 1em;
+  font-family: 'Henny Penny', cursive;
+  color: #6453a6 !important;
+}
+
+.box-2 {
+  height: 200px;
 }
 /*# sourceMappingURL=menu.css.map */
