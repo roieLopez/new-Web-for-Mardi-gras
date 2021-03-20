@@ -2,6 +2,13 @@ body {
   background-color: #f2f2f2;
 }
 
+.navbar-toggler-icon:active {
+  -webkit-transition: all ease-in-out 0.1s;
+  transition: all ease-in-out 0.1s;
+  -webkit-transform: scaleX(1.2);
+          transform: scaleX(1.2);
+}
+
 .navStyle {
   background-color: #0d0d0d !important;
   font-family: 'Henny Penny', cursive;
@@ -12,20 +19,55 @@ body {
   font-weight: 700;
 }
 
+.navStyle .navTextColor:active {
+  -webkit-transition: ease-in-out all 0.1s;
+  transition: ease-in-out all 0.1s;
+  -webkit-transform: scaleX(1.2);
+          transform: scaleX(1.2);
+}
+
 .navStyle .navTextColor2 {
   color: #8cbf3f !important;
+}
+
+.navStyle .navTextColor2:active {
+  -webkit-transition: ease-in-out all 0.1s;
+  transition: ease-in-out all 0.1s;
+  -webkit-transform: scaleX(1.2);
+          transform: scaleX(1.2);
 }
 
 .navStyle .navTextColor3 {
   color: #f2cc0f !important;
 }
 
+.navStyle .navTextColor3:active {
+  -webkit-transition: ease-in-out all 0.1s;
+  transition: ease-in-out all 0.1s;
+  -webkit-transform: scaleX(1.2);
+          transform: scaleX(1.2);
+}
+
 .navStyle .navTextColor4 {
   color: #6453a6 !important;
 }
 
+.navStyle .navTextColor4:active {
+  -webkit-transition: ease-in-out all 0.1s;
+  transition: ease-in-out all 0.1s;
+  -webkit-transform: scaleX(1.2);
+          transform: scaleX(1.2);
+}
+
 .navStyle .navTextColor5 {
   color: #8cbf3f !important;
+}
+
+.navStyle .navTextColor5:active {
+  -webkit-transition: ease-in-out all 0.1s;
+  transition: ease-in-out all 0.1s;
+  -webkit-transform: scaleX(1.2);
+          transform: scaleX(1.2);
 }
 
 .logo {
@@ -169,7 +211,8 @@ body {
 
 .textSlider {
   font-family: 'Roboto', sans-serif;
-  color: #f2f2f2 !important;
+  color: white !important;
+  z-index: 3;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -185,8 +228,8 @@ body {
 }
 
 .opas {
-  opacity: 0.8 !important;
   z-index: 1;
+  opacity: 0.6;
 }
 
 .sliderPng {
@@ -222,7 +265,7 @@ body {
 
 .sliderPng5 {
   height: 540px;
-  background-image: url(../../img/slider/2.jpg);
+  background-image: url(../../img/slider/5.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
