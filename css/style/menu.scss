@@ -4,6 +4,10 @@ body{
 
 }
 
+.navbar-toggler-icon{
+    // color: white !important;
+}
+
 .navStyle{
     // background-color: #f2cc0f !important;
     background-color: #0d0d0d !important;
@@ -270,4 +274,11 @@ div{
 
 .box-2{
     height: 200px;
+}
+
+
+@media (min-width: 200px) and (max-width: 768px){
+    .textSlider{
+        font-size: 1.5em !important;
+    }
 }
