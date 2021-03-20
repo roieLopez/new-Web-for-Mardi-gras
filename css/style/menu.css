@@ -7,10 +7,6 @@ body {
   font-family: 'Henny Penny', cursive;
 }
 
-.navStyle:hover {
-  opacity: 0.8;
-}
-
 .navStyle .navTextColor {
   color: #6453a6 !important;
   font-weight: 700;
@@ -258,9 +254,60 @@ body {
   height: 200px;
 }
 
-@media (min-width: 200px) and (max-width: 768px) {
+@media (min-width: 401px) and (max-width: 450px) {
+  .navbar-toggler {
+    margin-left: 156px;
+    z-index: 1;
+  }
   .textSlider {
     font-size: 1.5em !important;
+  }
+  .navbar-nav {
+    position: relative;
+    right: 177px;
+    top: 57px;
+  }
+  .form-inline {
+    position: relative;
+    bottom: 96px;
+  }
+}
+
+@media (min-width: 370px) and (max-width: 400px) {
+  .navbar-toggler {
+    margin-left: 138px;
+    z-index: 1;
+  }
+  .textSlider {
+    font-size: 1.5em !important;
+  }
+  .navbar-nav {
+    position: relative;
+    right: 177px;
+    top: 57px;
+  }
+  .form-inline {
+    position: relative;
+    bottom: 96px;
+  }
+}
+
+@media (min-width: 300px) and (max-width: 369px) {
+  .navbar-toggler {
+    margin-left: 112px;
+    z-index: 1;
+  }
+  .textSlider {
+    font-size: 1.5em !important;
+  }
+  .navbar-nav {
+    position: relative;
+    right: 177px;
+    top: 57px;
+  }
+  .form-inline {
+    position: relative;
+    bottom: 96px;
   }
 }
 /*# sourceMappingURL=menu.css.map */

@@ -14,7 +14,7 @@ body{
     font-family: 'Henny Penny', cursive;
     &:hover{
         // background-color: black !important;
-        opacity: 0.8;
+        // opacity: 0.8;
     }
     .navTextColor{
         color:#6453a6 !important;
@@ -277,8 +277,63 @@ div{
 }
 
 
-@media (min-width: 200px) and (max-width: 768px){
+
+////////////////////--------- 400px -----------///////////////////////
+@media (min-width: 401px) and (max-width: 450px){
+    .navbar-toggler{
+        margin-left: 156px;
+        z-index: 1;
+    }
     .textSlider{
         font-size: 1.5em !important;
     }
+.navbar-nav{
+    position: relative;
+    right: 177px;
+    top: 57px;
+}
+.form-inline{
+    position: relative;
+    bottom: 96px;
+}
+}
+
+////////////////////--------- 375px -----------///////////////////////
+@media (min-width: 370px) and (max-width: 400px){
+    .navbar-toggler{
+        margin-left: 138px;
+        z-index: 1;
+    }
+    .textSlider{
+        font-size: 1.5em !important;
+    }
+.navbar-nav{
+    position: relative;
+    right: 177px;
+    top: 57px;
+}
+.form-inline{
+    position: relative;
+    bottom: 96px;
+}
+}
+
+////////////////////--------- 300px -----------///////////////////////
+@media (min-width: 300px) and (max-width: 369px){
+    .navbar-toggler{
+        margin-left: 112px;
+        z-index: 1;
+    }
+    .textSlider{
+        font-size: 1.5em !important;
+    }
+.navbar-nav{
+    position: relative;
+    right: 177px;
+    top: 57px;
+}
+.form-inline{
+    position: relative;
+    bottom: 96px;
+}
 }
