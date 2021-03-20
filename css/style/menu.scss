@@ -185,11 +185,13 @@ div{
 }
 
 .textSlider{
-    font-family: 'Henny Penny', cursive;
-    color: #f2cc0f !important;
+    // font-family: 'Henny Penny', cursive;
+    font-family: 'Roboto', sans-serif;
+    // color: #f2cc0f !important;
+    color: #f2f2f2 !important;
     display: flex;
     justify-content: center;
-    font-size: 3em;
+    font-size: 2.5em;
 }
 
 .slider{
@@ -284,26 +286,13 @@ div{
 
 
 
-//////////////////--------- 400px -----------///////////////////////
-// @media (min-width: 375px) and (max-width: 768px){
-//     .navbar-toggler{
-//         // margin-left: 156px;
-//         z-index: 1;
+////////////////--------- 400px -----------///////////////////////
+@media (min-width: 200px) and (max-width: 500px){
+    .textSlider{
+        font-size: 1.5em !important;
+    }
 
-//     }
-//     .textSlider{
-//         font-size: 1.5em !important;
-//     }
-// .navbar-nav{
-//     position: relative;
-//     right: 177px;
-//     top: 57px;
-// }
-// .form-inline{
-//     position: relative;
-//     bottom: 96px;
-// }
-// }
+}
 
 ////////////////////--------- 375px -----------///////////////////////
 // @media (min-width: 370px) and (max-width: 400px){
