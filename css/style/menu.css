@@ -9,6 +9,10 @@ body {
           transform: scaleX(1.2);
 }
 
+.togglerPosi {
+  margin-right: 83px;
+}
+
 .navStyle {
   background-color: #0d0d0d !important;
   font-family: 'Henny Penny', cursive;
@@ -72,137 +76,6 @@ body {
 
 .logo {
   width: 255px;
-}
-
-.nav-btn {
-  font-family: 'Henny Penny', cursive;
-  font-weight: 600;
-  text-align: center;
-}
-
-.nav-btn img {
-  padding-bottom: 10px;
-}
-
-.nav-btn div {
-  max-width: 100%;
-  min-height: 10px;
-}
-
-.nav-btn div div:nth-child(2) a {
-  border-radius: 30px;
-  padding: 5px;
-  border: 3px solid #f2f2f2;
-  background-color: #ffffff;
-  text-decoration: none;
-  color: #9453A6;
-}
-
-.nav-btn div div:nth-child(2) a:hover {
-  -webkit-transition: all ease-in-out 2s;
-  transition: all ease-in-out 2s;
-}
-
-.nav-btn div div:nth-child(2) a:active {
-  -webkit-transition: all 2s ease-in-out;
-  transition: all 2s ease-in-out;
-}
-
-.nav-btn div div:nth-child(2):active {
-  -webkit-transform: scaleX(1.2);
-          transform: scaleX(1.2);
-}
-
-.nav-btn div div:nth-child(3) a {
-  border-radius: 30px;
-  padding: 5px;
-  border: 3px solid #f2f2f2;
-  background-color: #ffffff;
-  text-decoration: none;
-  color: #8CBF3F;
-}
-
-.nav-btn div div:nth-child(3) a:hover {
-  -webkit-transition: all ease-in-out 2s;
-  transition: all ease-in-out 2s;
-}
-
-.nav-btn div div:nth-child(3) a:active {
-  -webkit-transition: all 2s ease-in-out;
-  transition: all 2s ease-in-out;
-}
-
-.nav-btn div div:nth-child(3):active {
-  -webkit-transform: scaleX(1.2);
-          transform: scaleX(1.2);
-}
-
-.nav-btn div div:nth-child(4) a {
-  border-radius: 30px;
-  padding: 5px;
-  border: 3px solid #f2f2f2;
-  background-color: #ffffff;
-  text-decoration: none;
-  color: #F2CC0F;
-}
-
-.nav-btn div div:nth-child(4) a:hover {
-  -webkit-transition: all ease-in-out 2s;
-  transition: all ease-in-out 2s;
-}
-
-.nav-btn div div:nth-child(4) a:active {
-  -webkit-transition: all 2s ease-in-out;
-  transition: all 2s ease-in-out;
-}
-
-.nav-btn div div:nth-child(4):active {
-  -webkit-transform: scaleX(1.2);
-          transform: scaleX(1.2);
-}
-
-.nav-btn div div:nth-child(5) a {
-  border-radius: 30px;
-  padding: 5px;
-  border: 3px solid #f2f2f2;
-  background-color: #ffffff;
-  text-decoration: none;
-  color: #9453A6;
-}
-
-.nav-btn div div:nth-child(5) a:hover {
-  -webkit-transition: all ease-in-out 2s;
-  transition: all ease-in-out 2s;
-}
-
-.nav-btn div div:nth-child(5) a:active {
-  -webkit-transition: all 2s ease-in-out;
-  transition: all 2s ease-in-out;
-}
-
-.nav-btn div div:nth-child(5):active {
-  -webkit-transform: scaleX(1.2);
-          transform: scaleX(1.2);
-}
-
-.nav-btn div div:nth-child(6) label {
-  cursor: pointer;
-  border: 3px solid #f0e68b;
-  border-radius: 30px;
-  padding: 5px;
-}
-
-.nav-btn div div:nth-child(6) label:active {
-  -webkit-transform: scaleX(1.2);
-          transform: scaleX(1.2);
-}
-
-.nav-btn div div:nth-child(6) .inputSrc {
-  margin-top: 17px;
-  width: 220px;
-  border: 3px solid #f0e68b;
-  border-radius: 30px;
-  outline: none;
 }
 
 .nav-item {
@@ -270,34 +143,24 @@ body {
   background-size: cover;
 }
 
-.menu {
-  height: 400px;
-  background-color: #f2f2f2;
-  min-width: 100% !important;
-  border: 1px solid black;
+.bgFunders1 img {
+  border-radius: 100%;
+  width: 140px;
+  height: 140px;
 }
 
-.menu .imgBernard {
-  height: 400px;
+.menu .col-lg-6 {
+  margin-bottom: 1.5rem;
+  text-align: center;
 }
 
-.menu .imgBernard img {
-  width: 150px;
-  margin-top: 20px;
+.menu h2 {
+  font-weight: 400;
 }
 
-.menu .imgBernard .fontMenu {
-  font-size: 1em;
-  font-family: 'Henny Penny', cursive;
-  color: #6453a6 !important;
-}
-
-.box-2 {
-  height: 200px;
-}
-
-.togglerPosi {
-  margin-right: 83px;
+.menu .col-lg-6 p {
+  margin-right: .75rem;
+  margin-left: .75rem;
 }
 
 @media (min-width: 200px) and (max-width: 500px) {
