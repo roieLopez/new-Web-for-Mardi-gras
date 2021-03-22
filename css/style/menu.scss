@@ -159,6 +159,8 @@ width: 255px;
 
 // ------------ Menu ------------ //
 
+
+
 .bgFunders1{
     img{
         border-radius: 100%;
@@ -303,6 +305,13 @@ width: 255px;
     }
 
 @media only screen and(min-width:200px) and (max-width: 999px){
+    .fontSizeMenu{
+        font-size: 12px;
+        font-weight: 400;
+        h2{
+            font-size: 2em;
+        }
+    }
     .containerIframe{
         iframe{
             display: none;
@@ -315,11 +324,6 @@ width: 255px;
             visibility: hidden;
         }
     }
-}
-
-
-////////////////--------- 400px -----------///////////////////////
-@media (min-width: 200px) and (max-width: 500px){
     .textSlider{
         font-size: 1.5em !important;
     }
@@ -340,6 +344,30 @@ width: 255px;
         height: 350px;
     }
 }
+
+
+// ////////////////--------- 400px -----------///////////////////////
+// @media (min-width: 200px) and (max-width: 500px){
+//     .textSlider{
+//         font-size: 1.5em !important;
+//     }
+//     .sliderPng{
+//         height: 350px;
+
+//     }
+//     .sliderPng2{
+//         height: 350px;
+//     }
+//     .sliderPng3{
+//         height: 350px;
+//     }
+//     .sliderPng4{
+//         height: 350px;
+//     }
+//     .sliderPng5{
+//         height: 350px;
+//     }
+// }
 
 
 

@@ -247,6 +247,13 @@ body::-webkit-scrollbar-thumb {
 }
 
 @media only screen and (min-width: 200px) and (max-width: 999px) {
+  .fontSizeMenu {
+    font-size: 12px;
+    font-weight: 400;
+  }
+  .fontSizeMenu h2 {
+    font-size: 2em;
+  }
   .containerIframe iframe {
     display: none;
     visibility: hidden;
@@ -255,9 +262,6 @@ body::-webkit-scrollbar-thumb {
     display: none;
     visibility: hidden;
   }
-}
-
-@media (min-width: 200px) and (max-width: 500px) {
   .textSlider {
     font-size: 1.5em !important;
   }
