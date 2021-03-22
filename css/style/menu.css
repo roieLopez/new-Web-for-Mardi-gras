@@ -2,6 +2,26 @@ body {
   background-color: #f2f2f2;
 }
 
+body::-webkit-scrollbar {
+  width: 1em;
+}
+
+body::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+          box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  outline: 1px solid slategrey;
+}
+
+.oneone {
+  width: 500px;
+  height: 500px;
+  background-color: blue;
+}
+
 .navbar-toggler-icon:active {
   -webkit-transition: all ease-in-out 0.1s;
   transition: all ease-in-out 0.1s;
@@ -149,7 +169,7 @@ body {
   height: 140px;
 }
 
-.menu .col-lg-6 {
+.menu .col-6, .col-12, .col-sm-6, .col-md-6, .col-lg-6, .col-xl-6 {
   margin-bottom: 1.5rem;
   text-align: center;
 }
@@ -158,9 +178,83 @@ body {
   font-weight: 400;
 }
 
-.menu .col-lg-6 p {
+.menu p {
   margin-right: .75rem;
   margin-left: .75rem;
+}
+
+.scroll {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow-x: scroll;
+}
+
+@media only screen and (min-width: 2130px) and (max-width: 3748px) {
+  .containerIframe iframe {
+    height: 135vh;
+    width: 40vh;
+  }
+  .menu2 {
+    height: 135vh;
+    width: 40vh;
+    background-color: white;
+  }
+}
+
+@media only screen and (min-width: 1600px) and (max-width: 2129px) {
+  .containerIframe iframe {
+    height: 173vh;
+    width: 40vh;
+  }
+  .menu2 iframe {
+    height: 173vh;
+    width: 40vh;
+  }
+}
+
+@media only screen and (min-width: 1346px) and (max-width: 1599px) {
+  .containerIframe iframe {
+    height: 173vh;
+    width: 30vh;
+  }
+  .menu2 iframe {
+    height: 173vh;
+    width: 30vh;
+  }
+}
+
+@media only screen and (min-width: 1025px) and (max-width: 1345px) {
+  .containerIframe iframe {
+    width: 22vh;
+    height: 173vh;
+  }
+  .menu2 iframe {
+    height: 173vh;
+    width: 25vh;
+  }
+}
+
+@media only screen and (min-width: 1000px) and (max-width: 1024px) {
+  .containerIframe iframe {
+    width: 22vh;
+    height: 170vh;
+  }
+  .menu2 iframe {
+    height: 170vh;
+    width: 22vh;
+  }
+}
+
+@media only screen and (min-width: 200px) and (max-width: 999px) {
+  .containerIframe iframe {
+    display: none;
+    visibility: hidden;
+  }
+  .menu2 iframe {
+    display: none;
+    visibility: hidden;
+  }
 }
 
 @media (min-width: 200px) and (max-width: 500px) {
@@ -181,6 +275,144 @@ body {
   }
   .sliderPng5 {
     height: 350px;
+  }
+}
+
+.overlay {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  position: relative;
+  z-index: 3;
+  top: 0%;
+  margin: 0 0 0 294px;
+  width: 240px;
+  height: 100%;
+  text-align: center;
+  -webkit-transition: .6s;
+  transition: .6s;
+}
+
+.overlay a {
+  position: relative;
+  width: 11.1em;
+  height: 11.1em;
+  display: inline-block;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.59);
+}
+
+.overlay a #star {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin: -750px 0 0 -750px;
+  display: block;
+  width: 1500px;
+  height: 1500px;
+  opacity: .7;
+  pointer-events: none;
+  -webkit-transition: .6s;
+  transition: .6s;
+  background: url(https://www.mardigrasneworleans.com/templates/client/imagesNew/start2.png.pagespeed.ce.eJ-3YyMAoo.png) no-repeat center;
+  -webkit-animation: rotateSunbeam 130s linear infinite 2s;
+          animation: rotateSunbeam 130s linear infinite 2s;
+  will-change: transform, opacity;
+}
+
+.overlay a #outter {
+  font-size: 1em;
+  position: absolute;
+  margin: .23em;
+  width: 10.64em;
+  height: 10.64em;
+  border-radius: 50%;
+  background: #59258e url(https://www.mardigrasneworleans.com/templates/client/imagesNew/xcolorwheel.png.pagespeed.ic.67t0nvuILD.png) no-repeat center;
+  -webkit-transition: .6s;
+  transition: .6s;
+}
+
+.overlay a .inner {
+  position: relative;
+  width: 10em;
+  height: 10em;
+  margin: .54em;
+  border-radius: 50%;
+  text-align: center;
+  background: #fff url(https://www.mardigrasneworleans.com/templates/client/imagesNew/xscheduleCTA.jpg.pagespeed.ic.yJXQyGrvN8.jpg) center;
+  -webkit-box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.48);
+          box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.48);
+  -webkit-transform: rotate(-18deg);
+          transform: rotate(-18deg);
+}
+
+.overlay a .inner span {
+  display: block;
+  font-family: 'Lobster', cursive;
+  color: #2a292b;
+  line-height: 1.1em;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.32);
+}
+
+.overlay a .inner span:nth-child(1) {
+  padding-top: 1em;
+}
+
+.overlay a .inner span:nth-child(2) {
+  color: #3f940c;
+  font-size: 2.3em;
+  line-height: 1em;
+}
+
+.overlay a .inner span:nth-child(3) {
+  font-size: 1.8em;
+}
+
+.overlay a .inner span:nth-child(4) {
+  font-size: 1.4em;
+}
+
+.overlay a:hover #star {
+  opacity: 1;
+}
+
+.overlay a:hover #outter {
+  -webkit-box-shadow: 0 0 17px white, 0 0 30px white, 0 0 70px white, 0 0 160px white;
+          box-shadow: 0 0 17px white, 0 0 30px white, 0 0 70px white, 0 0 160px white;
+}
+
+@media (max-width: 1250px) {
+  .home .overlay {
+    left: inherit;
+    right: 6% !important;
+    top: 0%;
+    margin-left: 0;
+  }
+  .home .overlay {
+    right: 7%;
+  }
+  html:not(.home) .overlay {
+    right: 6%;
+    left: inherit;
+  }
+}
+
+@media (max-width: 950px) {
+  .overlay {
+    right: 6%;
+  }
+  html:not(.home) .overlay {
+    right: 4%;
   }
 }
 /*# sourceMappingURL=menu.css.map */
