@@ -304,11 +304,12 @@ body::-webkit-scrollbar-thumb:hover {
     height: 350px;
   }
   .whatsapp {
-    display: inline !important;
+    display: inline-block !important;
     position: -webkit-sticky !important;
     position: sticky !important;
-    top: 94% !important;
-    left: 2% !important;
+    top: 92% !important;
+    left: 0px !important;
+    right: 0px;
     bottom: 0px !important;
     z-index: 1 !important;
   }
@@ -323,11 +324,12 @@ body::-webkit-scrollbar-thumb:hover {
             transform: scale(1.1);
   }
   .call {
-    display: inline !important;
+    display: inline-block !important;
     position: -webkit-sticky !important;
     position: sticky !important;
-    top: 94% !important;
-    left: 85% !important;
+    top: 92% !important;
+    left: 100% !important;
+    right: 0px;
     bottom: 0px !important;
     z-index: 1 !important;
   }
