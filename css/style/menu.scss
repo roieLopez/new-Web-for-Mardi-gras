@@ -379,8 +379,8 @@ body::-webkit-scrollbar-thumb {
 
 .stickyIcons{
     position:sticky !important;
-    top: 90% !important;
-    bottom: 3% !important;
+    top: 92% !important;
+    bottom: 0% !important;
     z-index: 1 !important;
     .whatsapp {
         display:unset !important;
@@ -399,7 +399,7 @@ body::-webkit-scrollbar-thumb {
         top: 90% !important;
         left: 100% !important;
         right: 0px;
-        bottom: 3% !important;
+        // bottom: 3% !important;
         z-index: 1 !important;
         img {
             width: 60px !important;
