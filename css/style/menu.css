@@ -306,7 +306,7 @@ body::-webkit-scrollbar-thumb:hover {
   .stickyIcons {
     position: -webkit-sticky !important;
     position: sticky !important;
-    top: 92% !important;
+    top: 90% !important;
     bottom: 0% !important;
     z-index: 1 !important;
   }
