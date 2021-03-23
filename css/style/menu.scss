@@ -374,12 +374,12 @@ body::-webkit-scrollbar-thumb {
     }
 
     .whatsapp {
-        display: inline;
-        position: sticky;
-        top: 94%;
+        display: inline !important;
+        position: sticky !important;
+        top: 94% !important;
         left: 2% !important;
-        bottom: 0;
-        z-index: 1;
+        bottom: 0px !important;
+        z-index: 1 !important;
 
         img {
             width: 60px !important;
@@ -391,20 +391,20 @@ body::-webkit-scrollbar-thumb {
         }
     }
     .call {
-        display: inline;
-        position: sticky;
-        top: 94%;
+        display: inline !important;
+        position: sticky !important;
+        top: 94% !important;
         left: 85% !important;
-        bottom: 0;
-        z-index: 1;
+        bottom: 0px !important;
+        z-index: 1 !important;
 
 
         img {
             width: 60px !important;
             height: auto !important;
             &:active{
-                transition: all 0.2s ease-in-out;
-                transform: scale(1.1);
+                transition: all 0.2s ease-in-out !important;
+                transform: scale(1.1) !important;
             }
         }
     }
