@@ -3,11 +3,14 @@ body {
 
 }
 
-.whatsapp {
-    display: none;
-}
-.call {
-    display: none;
+
+.stickyIcons{
+    .whatsapp{
+        display: none;
+    }
+    .call{
+        display: none;
+    }
 }
 
 // ---------------------- Scroll Body Settings ---------------------- //
@@ -374,44 +377,41 @@ body::-webkit-scrollbar-thumb {
     }
 
 
+.stickyIcons{
+    position:sticky !important;
+    top: 90% !important;
+    bottom: 3% !important;
+    z-index: 1 !important;
+    .whatsapp {
+        display:unset !important;
+        img {
+            width: 60px !important;
+            height: auto !important;
+            &:active{
+                transition: all 0.2s ease-in-out;
+                transform: scale(1.1);
+            }
+        }
+    }
+    .call {
+        display: unset !important;
+        position: sticky !important;
+        top: 90% !important;
+        left: 100% !important;
+        right: 0px;
+        bottom: 3% !important;
+        z-index: 1 !important;
+        img {
+            width: 60px !important;
+            height: auto !important;
+            &:active{
+                transition: all 0.2s ease-in-out !important;
+                transform: scale(1.1) !important;
+            }
+        }
+    }
+}
 
-        .whatsapp {
-            display: inline-block !important;
-            position: sticky !important;
-            top: 92% !important;
-            left: 0px !important;
-            right: 0px;
-            bottom: 0px !important;
-            z-index: 1 !important;
-    
-            img {
-                width: 60px !important;
-                height: auto !important;
-                &:active{
-                    transition: all 0.2s ease-in-out;
-                    transform: scale(1.1);
-                }
-            }
-        }
-        .call {
-            display: inline-block !important;
-            position: sticky !important;
-            top: 92% !important;
-            left: 100% !important;
-            right: 0px;
-            bottom: 0px !important;
-            z-index: 1 !important;
-    
-    
-            img {
-                width: 60px !important;
-                height: auto !important;
-                &:active{
-                    transition: all 0.2s ease-in-out !important;
-                    transform: scale(1.1) !important;
-                }
-            }
-        }
 
 
 }

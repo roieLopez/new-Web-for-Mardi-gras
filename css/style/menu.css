@@ -2,11 +2,11 @@ body {
   background-color: #f2f2f2;
 }
 
-.whatsapp {
+.stickyIcons .whatsapp {
   display: none;
 }
 
-.call {
+.stickyIcons .call {
   display: none;
 }
 
@@ -303,41 +303,41 @@ body::-webkit-scrollbar-thumb:hover {
   .sliderPng5 {
     height: 350px;
   }
-  .whatsapp {
-    display: inline-block !important;
+  .stickyIcons {
     position: -webkit-sticky !important;
     position: sticky !important;
-    top: 92% !important;
-    left: 0px !important;
-    right: 0px;
-    bottom: 0px !important;
+    top: 90% !important;
+    bottom: 3% !important;
     z-index: 1 !important;
   }
-  .whatsapp img {
+  .stickyIcons .whatsapp {
+    display: unset !important;
+  }
+  .stickyIcons .whatsapp img {
     width: 60px !important;
     height: auto !important;
   }
-  .whatsapp img:active {
+  .stickyIcons .whatsapp img:active {
     -webkit-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
     -webkit-transform: scale(1.1);
             transform: scale(1.1);
   }
-  .call {
-    display: inline-block !important;
+  .stickyIcons .call {
+    display: unset !important;
     position: -webkit-sticky !important;
     position: sticky !important;
-    top: 92% !important;
+    top: 90% !important;
     left: 100% !important;
     right: 0px;
-    bottom: 0px !important;
+    bottom: 3% !important;
     z-index: 1 !important;
   }
-  .call img {
+  .stickyIcons .call img {
     width: 60px !important;
     height: auto !important;
   }
-  .call img:active {
+  .stickyIcons .call img:active {
     -webkit-transition: all 0.2s ease-in-out !important;
     transition: all 0.2s ease-in-out !important;
     -webkit-transform: scale(1.1) !important;
