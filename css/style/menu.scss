@@ -434,7 +434,7 @@ body::-webkit-scrollbar-thumb {
         height: 350px;
     }
 
-    @keyframes slideDown2 {
+    @keyframes rotation {
         0% {
             transform:rotate(0deg);
         }			
@@ -461,7 +461,7 @@ body::-webkit-scrollbar-thumb {
             &:active{
                 transition: all 0.2s ease-in-out;
                 transform: scale(1.1);
-                animation: slideDown2 0.3s;
+                animation: rotation 0.3s;
             }
         }
     }
@@ -480,8 +480,7 @@ body::-webkit-scrollbar-thumb {
             &:active{
                 transition: all 0.2s ease-in-out !important;
                 transform: scale(1.1) !important;
-                transform: scale(1.1);
-                animation: slideDown2 0.3s;
+                animation: rotation 0.3s;
             }
         }
     }
@@ -501,7 +500,10 @@ body::-webkit-scrollbar-thumb {
     background-repeat: no-repeat;
     background-size:cover;
     display: unset;
-
+    &:active{
+        transition: all 0.1s ease-in-out !important;
+        animation: rotation 0.3s;
+    }
 
 }
 
@@ -517,6 +519,12 @@ body::-webkit-scrollbar-thumb {
     border-radius: 50%;
     background: rgba(255, 255, 255, .59);
     text-decoration: none;
+    &:active{
+        background-color: blueviolet;
+        opacity: 0.7;
+        transition: all ease-in-out 0.4s;
+        transform: scale(1.1) !important;
+    }
 }
 
 
@@ -540,42 +548,43 @@ body::-webkit-scrollbar-thumb {
     margin: .54em;
     border-radius: 50%;
     text-align: center;
-    background: #fff url(https://www.mardigrasneworleans.com/templates/client/imagesNew/xscheduleCTA.jpg.pagespeed.ic.yJXQyGrvN8.jpg) center;
+    background: #fff url(../../img/element2.png) center;
     box-shadow: 1px 1px 8px rgba(0, 0, 0, .48);
-    transform: rotate(-18deg)
+    transform: rotate(-18deg);
 }
 
 
 
-.winnersElement a .inner span {
-    display: block;
-    font-family: 'Henny Penny', cursive;
-    color: #2a292b;
-    line-height: 1.1em;
-    text-shadow: 1px 1px 5px rgba(0, 0, 0, .32);
-    text-decoration: none;
+.winnersElement {
+    a {
+    .inner {
+        span {
+            display: block;
+            font-family: 'Henny Penny', cursive;
+            color: #2a292b;
+            line-height: 1.1em;
+            text-shadow: 1px 1px 5px rgba(0, 0, 0, .32);
+            text-decoration: none;
+            opacity: 0.5;
+
+        }
+        :nth-child(1) {
+            color: #f2cc0f;
+            font-size: 1.7em;
+            line-height: 1em
+        
+        }
+        :nth-child(2) {
+            color: #3f940c;
+            font-size: 2.5em;
+            line-height: 1em
+        }
+    }
 }
 
-.winnersElement a .inner span:nth-child(1) {
-    color: #3f940c;
-    font-size: 1.7em;
-    line-height: 1em
-
 }
 
-.winnersElement a .inner span:nth-child(2) {
-    color: black;
-    font-size: 2.5em;
-    line-height: 1em
-}
 
-.winnersElement a .inner span:nth-child(3) {
-    font-size: 1.8em
-}
-
-.winnersElement a .inner span:nth-child(4) {
-    font-size: 1.4em
-}
 
 .winnersElement a:hover #star {
     opacity: 1
