@@ -481,17 +481,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .winnersElement {
-    // display: flex;
-    // align-items: center;
-    // flex-wrap: wrap;
-    // justify-content: center;
-    // align-content: center;
-    // position: relative;
-    // top: 0%;
-    // bottom: 0%;
-    // left: 50%;
     z-index: 3;
-    // left: 50%;
     position: relative;
     bottom: 16px;
     width: 100%;
@@ -517,25 +507,6 @@ body::-webkit-scrollbar-thumb {
     
 }
 
-.winnersElement a .star {
-    // position: absolute;
-    // left: 186%;
-    // top: 195%;
-    // margin: -750px 0 0 -750px;
-    // display: block;
-    // width: 1000px !important;
-    // height: 1000px;
-    opacity: .7;
-    pointer-events: none;
-    transition: .6s;
-    // background: url(../../img/element.png) no-repeat center;
-    animation: rotateSunbeam 130s linear infinite 2s;
-    will-change: transform, opacity;
-    img{
-        width: 276px !important;
-        height: auto;
-    }
-}
 
 .winnersElement a #outter {
     font-size: 1em;
@@ -562,7 +533,7 @@ body::-webkit-scrollbar-thumb {
 
 .winnersElement a .inner span {
     display: block;
-    font-family: 'Lobster', cursive;
+    font-family: 'Henny Penny', cursive;
     color: #2a292b;
     line-height: 1.1em;
     text-shadow: 1px 1px 5px rgba(0, 0, 0, .32)
