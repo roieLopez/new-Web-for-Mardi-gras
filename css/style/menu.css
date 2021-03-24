@@ -394,8 +394,8 @@ body::-webkit-scrollbar-thumb:hover {
     transition: all 0.2s ease-in-out;
     -webkit-transform: scale(1.1);
             transform: scale(1.1);
-    -webkit-animation: slideDown2 0.1s;
-            animation: slideDown2 0.1s;
+    -webkit-animation: slideDown2 0.3s;
+            animation: slideDown2 0.3s;
   }
   .stickyIcons .call {
     display: unset !important;
@@ -416,8 +416,8 @@ body::-webkit-scrollbar-thumb:hover {
     -webkit-transform: scale(1.1) !important;
             transform: scale(1.1) !important;
     transform: scale(1.1);
-    -webkit-animation: slideDown2 0.1s;
-            animation: slideDown2 0.1s;
+    -webkit-animation: slideDown2 0.3s;
+            animation: slideDown2 0.3s;
   }
   .winnersElement {
     z-index: 3;
