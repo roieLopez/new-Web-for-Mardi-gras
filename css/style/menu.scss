@@ -192,12 +192,6 @@ body::-webkit-scrollbar-thumb {
  
 .containerMenu{
     .row{
-
-	                    // animation-name: slideDown;	
-        // animation-duration: 1s;	
-        // animation-timing-function: ease;		
-        // visibility: visible !important;	
-        // animation-delay: 0.23s;
         animation-name: fadeInUp;
         animation-duration: 2s;	
         animation-delay: 0.1s;
@@ -440,6 +434,15 @@ body::-webkit-scrollbar-thumb {
         height: 350px;
     }
 
+    @keyframes slideDown2 {
+        0% {
+            transform:rotate(0deg);
+        }			
+        100% {
+            transform: rotate(360deg);
+        }		
+    }
+
 
 .stickyIcons{
     position:sticky !important;
@@ -457,6 +460,7 @@ body::-webkit-scrollbar-thumb {
             &:active{
                 transition: all 0.2s ease-in-out;
                 transform: scale(1.1);
+                animation: slideDown2 0.1s;
             }
         }
     }
@@ -475,6 +479,8 @@ body::-webkit-scrollbar-thumb {
             &:active{
                 transition: all 0.2s ease-in-out !important;
                 transform: scale(1.1) !important;
+                transform: scale(1.1);
+                animation: slideDown2 0.1s;
             }
         }
     }
@@ -494,7 +500,12 @@ body::-webkit-scrollbar-thumb {
     background-repeat: no-repeat;
     background-size:cover;
     display: unset;
+
+
 }
+
+
+
 
 .winnersElement a {
     position: relative;
@@ -504,8 +515,9 @@ body::-webkit-scrollbar-thumb {
     display: inline-block;
     border-radius: 50%;
     background: rgba(255, 255, 255, .59);
-    
 }
+
+
 
 
 .winnersElement a #outter {
