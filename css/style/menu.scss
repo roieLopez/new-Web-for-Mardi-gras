@@ -516,6 +516,7 @@ body::-webkit-scrollbar-thumb {
     display: inline-block;
     border-radius: 50%;
     background: rgba(255, 255, 255, .59);
+    text-decoration: none;
 }
 
 
@@ -544,21 +545,27 @@ body::-webkit-scrollbar-thumb {
     transform: rotate(-18deg)
 }
 
+
+
 .winnersElement a .inner span {
     display: block;
     font-family: 'Henny Penny', cursive;
     color: #2a292b;
     line-height: 1.1em;
-    text-shadow: 1px 1px 5px rgba(0, 0, 0, .32)
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, .32);
+    text-decoration: none;
 }
 
 .winnersElement a .inner span:nth-child(1) {
-    padding-top: 1em
+    color: #3f940c;
+    font-size: 1.7em;
+    line-height: 1em
+
 }
 
 .winnersElement a .inner span:nth-child(2) {
-    color: #3f940c;
-    font-size: 2.3em;
+    color: black;
+    font-size: 2.5em;
     line-height: 1em
 }
 
