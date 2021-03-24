@@ -170,34 +170,40 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 .containerMenu .row {
-  -webkit-animation-name: slideUp;
-          animation-name: slideUp;
+  -webkit-animation-name: fadeInUp;
+          animation-name: fadeInUp;
   -webkit-animation-duration: 2s;
           animation-duration: 2s;
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s;
   -webkit-animation-timing-function: ease;
           animation-timing-function: ease;
   visibility: visible !important;
 }
 
-@-webkit-keyframes slideUp {
+@-webkit-keyframes fadeInUp {
   0% {
-    -webkit-transform: translateY(100%);
-            transform: translateY(100%);
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+            transform: translate3d(0, 100%, 0);
   }
   100% {
-    -webkit-transform: translateY(0%);
-            transform: translateY(0%);
+    opacity: 1;
+    -webkit-transform: none;
+            transform: none;
   }
 }
 
-@keyframes slideUp {
+@keyframes fadeInUp {
   0% {
-    -webkit-transform: translateY(100%);
-            transform: translateY(100%);
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+            transform: translate3d(0, 100%, 0);
   }
   100% {
-    -webkit-transform: translateY(0%);
-            transform: translateY(0%);
+    opacity: 1;
+    -webkit-transform: none;
+            transform: none;
   }
 }
 
@@ -244,6 +250,17 @@ body::-webkit-scrollbar-thumb:hover {
 
 .scroll::-webkit-scrollbar-thumb:hover {
   background-color: #8cbf3fb9;
+}
+
+.winnersElement {
+  display: none;
+}
+
+.footer {
+  color: white;
+  width: 100%;
+  height: 40px;
+  background-color: #323233;
 }
 
 @media only screen and (min-width: 2130px) and (max-width: 3748px) {
@@ -338,11 +355,14 @@ body::-webkit-scrollbar-thumb:hover {
   .stickyIcons {
     position: -webkit-sticky !important;
     position: sticky !important;
-    top: 90% !important;
+    top: 80% !important;
     bottom: 0% !important;
     z-index: 1 !important;
   }
   .stickyIcons .whatsapp {
+    position: -webkit-sticky !important;
+    position: sticky !important;
+    top: 90% !important;
     display: unset !important;
   }
   .stickyIcons .whatsapp img {
@@ -374,143 +394,95 @@ body::-webkit-scrollbar-thumb:hover {
     -webkit-transform: scale(1.1) !important;
             transform: scale(1.1) !important;
   }
-}
-
-.overlay {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  position: relative;
-  z-index: 3;
-  top: 0%;
-  margin: 0 0 0 294px;
-  width: 240px;
-  height: 100%;
-  text-align: center;
-  -webkit-transition: .6s;
-  transition: .6s;
-}
-
-.overlay a {
-  position: relative;
-  width: 11.1em;
-  height: 11.1em;
-  display: inline-block;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.59);
-}
-
-.overlay a #star {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  margin: -750px 0 0 -750px;
-  display: block;
-  width: 1500px;
-  height: 1500px;
-  opacity: .7;
-  pointer-events: none;
-  -webkit-transition: .6s;
-  transition: .6s;
-  background: url(https://www.mardigrasneworleans.com/templates/client/imagesNew/start2.png.pagespeed.ce.eJ-3YyMAoo.png) no-repeat center;
-  -webkit-animation: rotateSunbeam 130s linear infinite 2s;
-          animation: rotateSunbeam 130s linear infinite 2s;
-  will-change: transform, opacity;
-}
-
-.overlay a #outter {
-  font-size: 1em;
-  position: absolute;
-  margin: .23em;
-  width: 10.64em;
-  height: 10.64em;
-  border-radius: 50%;
-  background: #59258e url(https://www.mardigrasneworleans.com/templates/client/imagesNew/xcolorwheel.png.pagespeed.ic.67t0nvuILD.png) no-repeat center;
-  -webkit-transition: .6s;
-  transition: .6s;
-}
-
-.overlay a .inner {
-  position: relative;
-  width: 10em;
-  height: 10em;
-  margin: .54em;
-  border-radius: 50%;
-  text-align: center;
-  background: #fff url(https://www.mardigrasneworleans.com/templates/client/imagesNew/xscheduleCTA.jpg.pagespeed.ic.yJXQyGrvN8.jpg) center;
-  -webkit-box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.48);
-          box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.48);
-  -webkit-transform: rotate(-18deg);
-          transform: rotate(-18deg);
-}
-
-.overlay a .inner span {
-  display: block;
-  font-family: 'Lobster', cursive;
-  color: #2a292b;
-  line-height: 1.1em;
-  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.32);
-}
-
-.overlay a .inner span:nth-child(1) {
-  padding-top: 1em;
-}
-
-.overlay a .inner span:nth-child(2) {
-  color: #3f940c;
-  font-size: 2.3em;
-  line-height: 1em;
-}
-
-.overlay a .inner span:nth-child(3) {
-  font-size: 1.8em;
-}
-
-.overlay a .inner span:nth-child(4) {
-  font-size: 1.4em;
-}
-
-.overlay a:hover #star {
-  opacity: 1;
-}
-
-.overlay a:hover #outter {
-  -webkit-box-shadow: 0 0 17px white, 0 0 30px white, 0 0 70px white, 0 0 160px white;
-          box-shadow: 0 0 17px white, 0 0 30px white, 0 0 70px white, 0 0 160px white;
-}
-
-@media (max-width: 1250px) {
-  .home .overlay {
-    left: inherit;
-    right: 6% !important;
-    top: 0%;
-    margin-left: 0;
+  .winnersElement {
+    z-index: 3;
+    position: relative;
+    bottom: 16px;
+    width: 100%;
+    height: 700px;
+    left: 0px;
+    text-align: center;
+    -webkit-transition: .6s;
+    transition: .6s;
+    background-image: url(../../img/element.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: unset;
   }
-  .home .overlay {
-    right: 7%;
+  .winnersElement a {
+    position: relative;
+    top: 261px;
+    width: 11.1em;
+    height: 11.1em;
+    display: inline-block;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.59);
   }
-  html:not(.home) .overlay {
-    right: 6%;
-    left: inherit;
+  .winnersElement a .star {
+    opacity: .7;
+    pointer-events: none;
+    -webkit-transition: .6s;
+    transition: .6s;
+    -webkit-animation: rotateSunbeam 130s linear infinite 2s;
+            animation: rotateSunbeam 130s linear infinite 2s;
+    will-change: transform, opacity;
   }
-}
-
-@media (max-width: 950px) {
-  .overlay {
-    right: 6%;
+  .winnersElement a .star img {
+    width: 276px !important;
+    height: auto;
   }
-  html:not(.home) .overlay {
-    right: 4%;
+  .winnersElement a #outter {
+    font-size: 1em;
+    position: absolute;
+    margin: .23em;
+    width: 10.64em;
+    height: 10.64em;
+    border-radius: 50%;
+    background: #59258e url(https://www.mardigrasneworleans.com/templates/client/imagesNew/xcolorwheel.png.pagespeed.ic.67t0nvuILD.png) no-repeat center;
+    -webkit-transition: .6s;
+    transition: .6s;
+  }
+  .winnersElement a .inner {
+    position: relative;
+    width: 10em;
+    height: 10em;
+    margin: .54em;
+    border-radius: 50%;
+    text-align: center;
+    background: #fff url(https://www.mardigrasneworleans.com/templates/client/imagesNew/xscheduleCTA.jpg.pagespeed.ic.yJXQyGrvN8.jpg) center;
+    -webkit-box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.48);
+            box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.48);
+    -webkit-transform: rotate(-18deg);
+            transform: rotate(-18deg);
+  }
+  .winnersElement a .inner span {
+    display: block;
+    font-family: 'Lobster', cursive;
+    color: #2a292b;
+    line-height: 1.1em;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.32);
+  }
+  .winnersElement a .inner span:nth-child(1) {
+    padding-top: 1em;
+  }
+  .winnersElement a .inner span:nth-child(2) {
+    color: #3f940c;
+    font-size: 2.3em;
+    line-height: 1em;
+  }
+  .winnersElement a .inner span:nth-child(3) {
+    font-size: 1.8em;
+  }
+  .winnersElement a .inner span:nth-child(4) {
+    font-size: 1.4em;
+  }
+  .winnersElement a:hover #star {
+    opacity: 1;
+  }
+  .winnersElement a:hover #outter {
+    -webkit-box-shadow: 0 0 17px white, 0 0 30px white, 0 0 70px white, 0 0 160px white;
+            box-shadow: 0 0 17px white, 0 0 30px white, 0 0 70px white, 0 0 160px white;
   }
 }
 /*# sourceMappingURL=menu.css.map */
