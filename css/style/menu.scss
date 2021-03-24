@@ -184,6 +184,46 @@ body::-webkit-scrollbar-thumb {
 
 
 // ------------ Menu ------------ //
+// .menu{
+//     animation-name: fadeInUp;
+// }
+
+
+ 
+.containerMenu{
+    .row{
+
+	                    // animation-name: slideDown;	
+        // animation-duration: 1s;	
+        // animation-timing-function: ease;		
+        // visibility: visible !important;	
+        // animation-delay: 0.23s;
+        animation-name: slideUp;
+        animation-duration: 2s;	
+        animation-timing-function: ease;	
+        visibility: visible !important;	
+    }				
+}
+
+@keyframes slideUp {
+	0% {
+		transform: translateY(100%);
+	}
+		
+	100% {
+		transform: translateY(0%);
+	}	
+}
+
+// @keyframes slideDown {
+// 	0% {
+// 		transform: translateY(40%);
+// 	}
+	
+// 	100% {
+// 		transform: translateY(0%);
+// 	}		
+// }
 
 .bgFunders1 {
     img {
