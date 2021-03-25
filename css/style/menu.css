@@ -338,19 +338,19 @@ body::-webkit-scrollbar-thumb:hover {
     font-size: 1.5em !important;
   }
   .sliderPng {
-    height: 350px;
+    height: 400px;
   }
   .sliderPng2 {
-    height: 350px;
+    height: 400px;
   }
   .sliderPng3 {
-    height: 350px;
+    height: 400px;
   }
   .sliderPng4 {
-    height: 350px;
+    height: 400px;
   }
   .sliderPng5 {
-    height: 350px;
+    height: 400px;
   }
   @-webkit-keyframes rotation {
     0% {
