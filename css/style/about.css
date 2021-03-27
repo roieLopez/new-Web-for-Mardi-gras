@@ -130,6 +130,7 @@ body::-webkit-scrollbar-thumb:hover {
 
 .containerMenu .row .fontSizeMenu .aboutTitle {
   text-align: left;
+  margin-left: 10px;
 }
 
 .containerMenu .row .fontSizeMenu .aboutContent {
