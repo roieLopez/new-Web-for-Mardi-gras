@@ -4,11 +4,12 @@ body {
 }
 
 
-.stickyIcons{
-    .whatsapp{
+.stickyIcons {
+    .whatsapp {
         display: none;
     }
-    .call{
+
+    .call {
         display: none;
     }
 }
@@ -110,104 +111,73 @@ body::-webkit-scrollbar-thumb {
 // ------------ Menu ------------ //
 
 
-.festivalImg {
-    img{
-        border-radius: 30%;
-        width: 400px;
-        height: 200px;
-    }
-}
- 
 
-.mayorImg {
-    img {
-        border-radius: 10%;
-        width: 120px;
-        height: 150px;
-    }
-}
-
-.containerMenu{
-    .row{
+    .row {
         animation-name: fadeInUp;
-        animation-duration: 2s;	
+        animation-duration: 2s;
         animation-delay: 0.1s;
-        animation-timing-function: ease;	
-        visibility: visible !important;	
-        .fontSizeMenu{
+        animation-timing-function: ease;
+        visibility: visible !important;
 
-            .aboutTitle{
+        .fontSizeMenu {
+
+            .aboutTitle {
                 text-align: left;
                 margin-left: 10px;
-                color:#6453a6;
+                color: #6453a6;
                 font-weight: 600;
             }
-           .aboutContent{
-               text-align: left;
-           } 
+
+            .aboutContent {
+                text-align: left;
+            }
         }
     }
-    
-    .containerMenu2{
-        .row{
-            animation-name: fadeInUp;
-            animation-duration: 2s;	
-            animation-delay: 0.1s;
-            animation-timing-function: ease;	
-            visibility: visible !important;	  
+
+
+
+    .menu {
+        margin-bottom: 1.5rem;
+        text-align: center;
+    }
+
+
+    .menu h2 {
+        font-weight: 400;
+    }
+
+    .menu p {
+        margin-right: .75rem;
+        margin-left: .75rem;
+    }
+
+
+    @keyframes fadeInUp {
+        0% {
+            opacity: 0;
+            transform: translate3d(0, 100%, 0)
+        }
+
+        100% {
+            opacity: 1;
+            transform: none
         }
     }
-}
 
 
-.menu{
-    margin-bottom: 1.5rem;
-    text-align: center;
-}
 
-
-// .menu .col-6,
-// .col-12,
-// .col-sm-6,
-// .col-md-6,
-// .col-lg-6,
-// .col-xl-6 {
-//     margin-bottom: 1.5rem;
-//     text-align: center;
-// }
-
-.menu h2 {
-    font-weight: 400;
-}
-
-.menu p {
-    margin-right: .75rem;
-    margin-left: .75rem;
-}
-
-
-@keyframes fadeInUp {
-    0% {
-        opacity: 0;
-        transform: translate3d(0, 100%, 0)
-    }
-
-    100% {
-        opacity: 1;
-        transform: none
-    }
-}
 // ------------ End Menu ------------ //
 
 
 // ------------ Footer ------------ //
-.footer{
+.footer {
     color: #f2f2f2;
     width: 100%;
     height: 40px;
     background-color: #323233;
     text-align: center;
 }
+
 // ------------ End Footer ------------ //
 
 // ------------------------------ Media ------------------------------ //
@@ -288,13 +258,15 @@ body::-webkit-scrollbar-thumb {
 }
 
 @media only screen and(min-width:1000px) and (max-width: 1024px) {
-    .navbar-collapse{
+    .navbar-collapse {
         position: relative;
         left: 14%;
     }
-    .form-inline{
+
+    .form-inline {
         display: none;
     }
+
     .containerIframe {
         iframe {
             width: 22vh;
@@ -309,14 +281,15 @@ body::-webkit-scrollbar-thumb {
         }
     }
 
-    .someImgsTitle{
-    margin-top: 50%;
-    }   
-    // .mayorImg{
-    //     // margin-top: 40%;
-    // }
+    .someImgsTitle {
+        margin-top: 50%;
+    }
 
-    .aboutImg2{
+    .mayorImg {
+        // margin-top: 40%;
+    }
+
+    .aboutImg2 {
         margin-top: 40% !important;
     }
 }
@@ -331,7 +304,7 @@ body::-webkit-scrollbar-thumb {
         }
     }
 
-    .hide{
+    .hide {
         display: none;
     }
 
@@ -345,14 +318,14 @@ body::-webkit-scrollbar-thumb {
 
 
 
-    
+
 
 // ------------------------------ End Media ------------------------------ //
 
 
 
 // .iframeLogo{
-    
+
 //     iframe{
 //         height: 20vh;
 //         width: auto;
@@ -420,5 +393,3 @@ body::-webkit-scrollbar-thumb {
 //         right: 4%
 //     }
 // }
-
-
