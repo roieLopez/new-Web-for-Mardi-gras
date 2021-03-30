@@ -284,6 +284,12 @@ body::-webkit-scrollbar-thumb {
             width: 22vh;
         }
     }
+    .aboutImg1{
+        margin-top: 20%;
+    }
+    .aboutImg2{
+        margin-top: 40% !important;
+    }
 }
 
 @media only screen and(min-width:200px) and (max-width: 999px) {
@@ -296,7 +302,9 @@ body::-webkit-scrollbar-thumb {
         }
     }
 
-
+    .hide{
+        display: none;
+    }
 
 
 }
