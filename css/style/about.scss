@@ -271,6 +271,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 @media only screen and(min-width:1025px) and (max-width: 1345px) {
+
     .containerIframe {
         iframe {
             width: 22vh;
@@ -287,6 +288,13 @@ body::-webkit-scrollbar-thumb {
 }
 
 @media only screen and(min-width:1000px) and (max-width: 1024px) {
+    .navbar-collapse{
+        position: relative;
+        left: 14%;
+    }
+    .form-inline{
+        display: none;
+    }
     .containerIframe {
         iframe {
             width: 22vh;
@@ -300,12 +308,14 @@ body::-webkit-scrollbar-thumb {
             width: 22vh;
         }
     }
+
+    .someImgsTitle{
+    margin-top: 50%;
+    }   
     .mayorImg{
-        margin-top: 40%;
+        // margin-top: 40%;
     }
-    .aboutImg1{
-        margin-top: 20%;
-    }
+
     .aboutImg2{
         margin-top: 40% !important;
     }
@@ -321,15 +331,8 @@ body::-webkit-scrollbar-thumb {
         }
     }
 
-    .tiitleMayorCity{
-        padding-top: 5%;
-        padding-bottom: 5%;
-    }    
     .hide{
         display: none;
-    }
-    .mayorImg{
-        margin-top: 10%;
     }
 
 }

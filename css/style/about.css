@@ -244,6 +244,13 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 @media only screen and (min-width: 1000px) and (max-width: 1024px) {
+  .navbar-collapse {
+    position: relative;
+    left: 14%;
+  }
+  .form-inline {
+    display: none;
+  }
   .containerIframe iframe {
     width: 22vh;
     height: 170vh;
@@ -252,11 +259,8 @@ body::-webkit-scrollbar-thumb:hover {
     height: 170vh;
     width: 22vh;
   }
-  .mayorImg {
-    margin-top: 40%;
-  }
-  .aboutImg1 {
-    margin-top: 20%;
+  .someImgsTitle {
+    margin-top: 50%;
   }
   .aboutImg2 {
     margin-top: 40% !important;
@@ -271,15 +275,8 @@ body::-webkit-scrollbar-thumb:hover {
   .fontSizeMenu h2 {
     font-size: 2em;
   }
-  .tiitleMayorCity {
-    padding-top: 5%;
-    padding-bottom: 5%;
-  }
   .hide {
     display: none;
-  }
-  .mayorImg {
-    margin-top: 10%;
   }
 }
 /*# sourceMappingURL=about.css.map */
