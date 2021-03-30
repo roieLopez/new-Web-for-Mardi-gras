@@ -252,6 +252,9 @@ body::-webkit-scrollbar-thumb:hover {
     height: 170vh;
     width: 22vh;
   }
+  .mayorImg {
+    margin-top: 40%;
+  }
   .aboutImg1 {
     margin-top: 20%;
   }
@@ -268,8 +271,15 @@ body::-webkit-scrollbar-thumb:hover {
   .fontSizeMenu h2 {
     font-size: 2em;
   }
+  .tiitleMayorCity {
+    padding-top: 5%;
+    padding-bottom: 5%;
+  }
   .hide {
     display: none;
+  }
+  .mayorImg {
+    margin-top: 10%;
   }
 }
 /*# sourceMappingURL=about.css.map */

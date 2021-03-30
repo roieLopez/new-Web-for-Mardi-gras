@@ -257,13 +257,13 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 .footer {
-  color: white;
+  color: #f2f2f2;
   width: 100%;
   height: 40px;
   background-color: #323233;
 }
 
-@media only screen and (min-width: 2130px) and (max-width: 3748px) {
+@media (min-width: 2130px) and (max-width: 3748px) {
   .containerIframe iframe {
     height: 135vh;
     width: 40vh;
@@ -274,51 +274,98 @@ body::-webkit-scrollbar-thumb:hover {
   }
 }
 
-@media only screen and (min-width: 1600px) and (max-width: 2129px) {
+@media (min-width: 1600px) and (max-width: 2129px) {
   .containerIframe iframe {
-    height: 173vh;
+    height: 153vh;
     width: 40vh;
   }
   .menu2 iframe {
-    height: 173vh;
+    height: 153vh;
     width: 40vh;
   }
 }
 
-@media only screen and (min-width: 1346px) and (max-width: 1599px) {
+@media (min-width: 1346px) and (max-width: 1599px) {
   .containerIframe iframe {
-    height: 173vh;
+    height: 153vh;
     width: 30vh;
   }
   .menu2 iframe {
-    height: 173vh;
+    height: 153vh;
     width: 30vh;
   }
 }
 
-@media only screen and (min-width: 1025px) and (max-width: 1345px) {
+@media (min-width: 1025px) and (max-width: 1345px) {
   .containerIframe iframe {
     width: 22vh;
-    height: 173vh;
+    height: 153vh;
   }
   .menu2 iframe {
-    height: 173vh;
+    height: 153vh;
     width: 25vh;
   }
 }
 
-@media only screen and (min-width: 1000px) and (max-width: 1024px) {
+@media (min-width: 1000px) and (max-width: 1024px) {
+  .form-inline {
+    display: none;
+  }
   .containerIframe iframe {
-    width: 22vh;
-    height: 170vh;
+    display: none;
   }
   .menu2 iframe {
-    height: 170vh;
-    width: 22vh;
+    display: none;
+  }
+  .stickyIcons {
+    position: -webkit-sticky !important;
+    position: sticky !important;
+    top: 90% !important;
+    bottom: 0% !important;
+    z-index: 1 !important;
+  }
+  .stickyIcons .whatsapp {
+    position: -webkit-sticky !important;
+    position: sticky !important;
+    top: 90% !important;
+    display: unset !important;
+  }
+  .stickyIcons .whatsapp img {
+    width: 60px !important;
+    height: auto !important;
+  }
+  .stickyIcons .whatsapp img:active {
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+    -webkit-animation: rotation 0.3s;
+            animation: rotation 0.3s;
+  }
+  .stickyIcons .call {
+    display: unset !important;
+    position: -webkit-sticky !important;
+    position: sticky !important;
+    top: 90% !important;
+    left: 100% !important;
+    right: 0px;
+    z-index: 1 !important;
+  }
+  .stickyIcons .call img {
+    width: 60px !important;
+    height: auto !important;
+  }
+  .stickyIcons .call img:active {
+    -webkit-transition: all 0.2s ease-in-out !important;
+    transition: all 0.2s ease-in-out !important;
+    -webkit-transform: scale(1.1) !important;
+            transform: scale(1.1) !important;
+    -webkit-animation: rotation 0.3s;
+            animation: rotation 0.3s;
   }
 }
 
-@media only screen and (min-width: 200px) and (max-width: 999px) {
+@media (min-width: 200px) and (max-width: 999px) {
   .fontSizeMenu {
     font-size: 12px;
     font-weight: 400;

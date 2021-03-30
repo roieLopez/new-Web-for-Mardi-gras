@@ -300,6 +300,9 @@ body::-webkit-scrollbar-thumb {
             width: 22vh;
         }
     }
+    .mayorImg{
+        margin-top: 40%;
+    }
     .aboutImg1{
         margin-top: 20%;
     }
@@ -318,10 +321,16 @@ body::-webkit-scrollbar-thumb {
         }
     }
 
+    .tiitleMayorCity{
+        padding-top: 5%;
+        padding-bottom: 5%;
+    }    
     .hide{
         display: none;
     }
-
+    .mayorImg{
+        margin-top: 10%;
+    }
 
 }
 

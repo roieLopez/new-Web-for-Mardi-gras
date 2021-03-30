@@ -286,7 +286,7 @@ body::-webkit-scrollbar-thumb {
 
 // ------------ Footer ------------ //
 .footer{
-    color: white;
+    color: #f2f2f2;
     width: 100%;
     height: 40px;
     background-color: #323233;
@@ -295,7 +295,7 @@ body::-webkit-scrollbar-thumb {
 
 // ------------------------------ Media ------------------------------ //
 
-@media only screen and(min-width:2130px) and (max-width: 3748px) {
+@media (min-width:2130px) and (max-width: 3748px) {
     .containerIframe {
         // position: absolute;
         // right: 0;
@@ -314,13 +314,13 @@ body::-webkit-scrollbar-thumb {
     }
 }
 
-@media only screen and(min-width:1600px) and (max-width: 2129px) {
+@media (min-width:1600px) and (max-width: 2129px) {
     .containerIframe {
         // position: absolute;
         // right: 0;
 
         iframe {
-            height: 173vh;
+            height: 153vh;
             width: 40vh;
 
         }
@@ -328,64 +328,111 @@ body::-webkit-scrollbar-thumb {
 
     .menu2 {
         iframe {
-            height: 173vh;
+            height: 153vh;
             width: 40vh;
         }
     }
 }
 
-@media only screen and(min-width:1346px) and (max-width: 1599px) {
+@media (min-width:1346px) and (max-width: 1599px) {
     .containerIframe {
         // position: absolute;
         // right: 0;
 
         iframe {
-            height: 173vh;
+            height: 153vh;
             width: 30vh;
         }
     }
 
     .menu2 {
         iframe {
-            height: 173vh;
+            height: 153vh;
             width: 30vh;
         }
     }
 }
 
-@media only screen and(min-width:1025px) and (max-width: 1345px) {
+@media (min-width:1025px) and (max-width: 1345px) {
     .containerIframe {
         iframe {
             width: 22vh;
-            height: 173vh;
+            height: 153vh;
         }
     }
 
     .menu2 {
         iframe {
-            height: 173vh;
+            height: 153vh;
             width: 25vh;
         }
     }
 }
 
-@media only screen and(min-width:1000px) and (max-width: 1024px) {
+@media (min-width:1000px) and (max-width: 1024px) {
+    .form-inline{
+        display: none;
+    }
     .containerIframe {
         iframe {
-            width: 22vh;
-            height: 170vh;
+            // width: 22vh;
+            // height: 170vh;
+            display: none;
         }
     }
 
     .menu2 {
         iframe {
-            height: 170vh;
-            width: 22vh;
+            display: none;
+            // height: 170vh;
+            // width: 22vh;
+        }
+    }
+    
+.stickyIcons{
+    position:sticky !important;
+    top: 90% !important;
+    bottom: 0% !important;
+    z-index: 1 !important;
+    
+    .whatsapp {
+        position: sticky !important;
+        top: 90% !important;
+        display:unset !important;
+
+        img {
+            width: 60px !important;
+            height: auto !important;
+            &:active{
+                transition: all 0.2s ease-in-out;
+                transform: scale(1.1);
+                animation: rotation 0.3s;
+            }
+        }
+    }
+    .call {
+
+        display: unset !important;
+        position: sticky !important;
+        top: 90% !important;
+        left: 100% !important;
+        right: 0px;
+        // bottom: 3% !important;
+        z-index: 1 !important;
+        img {
+            width: 60px !important;
+            height: auto !important;
+            &:active{
+                transition: all 0.2s ease-in-out !important;
+                transform: scale(1.1) !important;
+                animation: rotation 0.3s;
+            }
         }
     }
 }
+}
 
-@media only screen and(min-width:200px) and (max-width: 999px) {
+@media (min-width:200px) and (max-width: 999px) {
     .fontSizeMenu {
         font-size: 12px;
         font-weight: 400;
