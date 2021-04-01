@@ -513,7 +513,7 @@ body::-webkit-scrollbar-thumb:hover {
     margin: .54em;
     border-radius: 50%;
     text-align: center;
-    background: #fff url(../../img/element2.png) center;
+    background: #fff url(../../../img/element2.png) center;
     -webkit-box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.48);
             box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.48);
     -webkit-transform: rotate(-18deg);
