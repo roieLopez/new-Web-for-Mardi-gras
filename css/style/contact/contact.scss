@@ -130,14 +130,16 @@ form {
     margin-bottom: 16px;
 }
 
-input {
-    height: 45px;
-}
+// input {
+//     height: 45px;
+// }
 
 
 .btnSend {
     background-color: #6453a6;
     border-color: transparent;
+    color: white;
+    height: 45px;
 
     &:active {
         background-color: #9993b3;
