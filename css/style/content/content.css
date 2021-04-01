@@ -28,6 +28,10 @@ body::-webkit-scrollbar-thumb:hover {
   background-color: #6453a6b4;
 }
 
+.navbar-nav {
+  margin-left: 23px;
+}
+
 .navbar-toggler-icon:active {
   -webkit-transition: all ease-in-out 0.1s;
   transition: all ease-in-out 0.1s;

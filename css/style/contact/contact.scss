@@ -37,6 +37,9 @@ body::-webkit-scrollbar-thumb {
 // ---------------------- End Scroll Body Settings ---------------------- //
 
 // ---------------------- Nav Bar ---------------------- //
+.navbar-nav{
+    margin-left: 23px;
+}
 
 .navbar-toggler-icon {
     &:active {
@@ -50,7 +53,6 @@ body::-webkit-scrollbar-thumb {
 }
 
 .navStyle {
-    // background-color: #f2cc0f !important;
     background-color: #0d0d0d !important;
     font-family: 'Henny Penny', cursive;
 
@@ -106,7 +108,6 @@ body::-webkit-scrollbar-thumb {
 }
 
 // ---------------------- End Nav Bar ---------------------- //
-
 
 // ------------ Menu ------------ //
 
