@@ -117,10 +117,28 @@ body::-webkit-scrollbar-thumb {
         text-align: left !important;
     div{
         height: 20% !important;
+        // background-color: red;
     }
     h3{
-        background-color: #6453a6;
-        color: #8cbf3f;
+        font-weight: 600 !important;
+        background-color: rgba(0, 0, 0, 0.563);
+        border: none !important;
+        &:active{
+            color:white;
+            border: none !important;
+        }
+        &:nth-child(1){
+            color: #f2cc0f !important;
+        }
+        &:nth-child(3){
+            color: #8cbf3f !important;
+        }
+        &:nth-child(5){
+            color: #f2cc0f !important;
+        }
+        &:nth-child(7){
+            color: #8cbf3f !important;
+        }
     }
 
     }
@@ -129,7 +147,7 @@ body::-webkit-scrollbar-thumb {
 .titleContent {
     font-size: 3em !important;
     font-family: 'Henny Penny', cursive !important;
-    color: #f2cc0f;
+    color: #6453a6;
 }
 
 
@@ -207,15 +225,6 @@ body::-webkit-scrollbar-thumb {
     }
     .container{
         width: 100% !important;
-        .accordion{
-            text-align: left !important;
-            background-color: red !important;
-        h3{
-            background-color: #6453a6;
-            color: #8cbf3f;
-        }
-    
-        }
     }
     
 
