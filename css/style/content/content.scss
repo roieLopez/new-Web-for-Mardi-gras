@@ -121,23 +121,12 @@ body::-webkit-scrollbar-thumb {
     }
     h3{
         font-weight: 600 !important;
-        background-color: rgba(0, 0, 0, 0.563);
+        background-color: #6453a6;
         border: none !important;
+        color: #f2cc0f !important;
         &:active{
             color:white;
             border: none !important;
-        }
-        &:nth-child(1){
-            color: #f2cc0f !important;
-        }
-        &:nth-child(3){
-            color: #8cbf3f !important;
-        }
-        &:nth-child(5){
-            color: #f2cc0f !important;
-        }
-        &:nth-child(7){
-            color: #8cbf3f !important;
         }
     }
 
