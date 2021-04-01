@@ -226,5 +226,8 @@ body::-webkit-scrollbar-thumb:hover {
   .container {
     width: 100% !important;
   }
+  .hide {
+    display: none;
+  }
 }
 /*# sourceMappingURL=content.css.map */
