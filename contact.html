@@ -7,19 +7,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- <link rel="stylesheet" href="./css/boostrap/bootstrap.css"> -->
   <link rel="stylesheet" href="./css/boostrap/bootstrap.min.css">
-  <link href="./css/style/media/media.css" rel="stylesheet">
+  <link href="./css/style/contact/contact.css" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Henny+Penny&display=swap" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,700&display=swap" rel="stylesheet">
-  <!------------------------------- fancybox -------------------------------------->
-  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+ 
+ 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>    
 
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
-  <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
-
-  <!------------------------------- End fancybox -------------------------------------->
-  <title>Media Page</title>
+ 
+  <title>Contact Page</title>
 </head>
 
 <body>
@@ -58,10 +56,10 @@
           <a class="nav-link navTextColor3" href="./about.html">ABOUT</a>
         </li>
         <li class="nav-item pr-5">
-          <a class="nav-link navTextColor4" href="./content.html">CONTENT</a>
+          <a class="nav-link navTextColor4" href="./media.html">MEDIA</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link navTextColor5" href="./contact.html">CONTACT</a>
+          <a class="nav-link navTextColor5" href="./content.html">CONTENT</a>
         </li>
       </ul>
 
@@ -87,34 +85,20 @@
 
 
       <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 pb-5">
-        <h1 class="pb-2 mediaTitle">MEDIA</h1>
+
+        <h1 class="pb-2 titleContact">CONTACT</h1>
         <hr class="pb-4" style="width: 20%;">
-
         <div class="row d-flex justify-content-center align-items-center">
-          <a data-fancybox="gallery" href="./img/smallbigimgs/bigimg3.jpg"><img class="img-thumbnail m-1"
-              src="./img/smallbigimgs/smallimg3.jpg"></a>
-
-          <a data-fancybox="gallery" href="./img/smallbigimgs/bigimg2.jpg"><img class="img-thumbnail m-1"
-              src="./img/smallbigimgs/smallimg2.jpg"></a>
-
-          <a data-fancybox="gallery" href="./img/smallbigimgs/bigimg8.jpg"><img class="img-thumbnail m-1"
-              src="./img/smallbigimgs/smallimg8.jpg"></a>
-
-          <a data-fancybox="gallery" href="./img/smallbigimgs/bigimg4.jpg"><img class="img-thumbnail m-1"
-              src="./img/smallbigimgs/smallimg4.jpg"></a>
-
-
-          <a data-fancybox="gallery" href="./img/smallbigimgs/bigimg5.jpg"><img class="img-thumbnail m-1"
-              src="./img/smallbigimgs/smallimg5.jpg"></a>
-
-          <a data-fancybox="gallery" href="./img/smallbigimgs/bigimg7.jpg"><img class="img-thumbnail m-1"
-              src="./img/smallbigimgs/smallimg7.jpg"></a>
-
-          <a data-fancybox="gallery" href="./img/smallbigimgs/bigimg6.jpg"><img class="img-thumbnail m-1"
-              src="./img/smallbigimgs/smallimg6.jpg"></a>
-
-          <a data-fancybox="gallery" href="./img/smallbigimgs/bigimg.jpg"><img class="img-thumbnail m-1"
-              src="./img/smallbigimgs/smallimg.jpg"></a>
+          <div class="container">
+            <form>
+              <input name="name" type="text" placeholder="Your Name" class="contact-control" required>
+              <br>
+              <input name="email" type="text" placeholder="Your Email" class="contact-control" required>
+              <br>
+              <textarea name="message" id="" cols="30" rows="4" placeholder="Message" class="contact-control" required></textarea><br>
+              <input type="submit" value="Send Message" class="contact-control btnSend">
+            </form>
+        </div>
         </div>
       </div>
 
@@ -125,15 +109,7 @@
       <!------------------ End The Mayor ------------------->
 
     </div>
-    <hr class="" style="width: 20%;">
 
-    <div class="d-flex justify-content-center">
-      <span class="roie"></span>
-      <iframe src="https://www.youtube.com/embed/MkxQN7twP0o" width="1200" height="584" title="YouTube video player"
-      frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-      allowfullscreen class="p-5 tal"></iframe>
-     </div>
   </div>
 
 
@@ -159,6 +135,24 @@
   </footer>
 </body>
 
+<!-- <script>
+  $(function() {
+   
+   $(".form-control").on('focus', function(){
+
+       $(this).parents(".form-group").addClass('focused');
+
+   });
+
+   $(".form-control").on('blur', function(){
+
+       $(this).parents(".form-group").removeClass('focused');
+
+   });
+
+});
+</script> -->
+
 
 <script src="./js/menu.js"></script>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
@@ -169,3 +163,6 @@
 </script>
 
 </html>
+
+
+
