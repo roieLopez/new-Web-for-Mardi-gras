@@ -115,10 +115,11 @@ body::-webkit-scrollbar-thumb {
 
 .container{
     width: 70% !important;
+    height: auto;
     .accordion{
         text-align: left !important;
     div{
-        height: 20% !important;
+        min-height: 20% !important;
         // background-color: red;
     }
     h3{
@@ -126,6 +127,7 @@ body::-webkit-scrollbar-thumb {
         background-color: #6453a6;
         border: none !important;
         color: #f2cc0f !important;
+        text-align: center;
         &:active{
             color:white;
             border: none !important;
@@ -142,8 +144,17 @@ body::-webkit-scrollbar-thumb {
 }
 
 
-.row {
-    animation-name: fadeInUp;
+.accordion {
+    animation-name: fadeRight;
+    animation-duration: 2s;
+    animation-delay: 0.1s;
+    animation-timing-function: ease;
+    visibility: visible !important;
+
+}
+
+.titleContent {
+    animation-name: fadeBottomToTop;
     animation-duration: 2s;
     animation-delay: 0.1s;
     animation-timing-function: ease;
@@ -168,7 +179,19 @@ body::-webkit-scrollbar-thumb {
 }
 
 
-@keyframes fadeInUp {
+@keyframes fadeRight {
+    0% {
+        opacity: 0;
+        transform: translate3d(100%, 0, 0)
+    }
+
+    100% {
+        opacity: 1;
+        transform: none
+    }
+}
+
+@keyframes fadeBottomToTop {
     0% {
         opacity: 0;
         transform: translate3d(0, 100%, 0)
@@ -179,8 +202,6 @@ body::-webkit-scrollbar-thumb {
         transform: none
     }
 }
-
-
 
 // ------------ End Menu ------------ //
 
@@ -225,3 +246,102 @@ body::-webkit-scrollbar-thumb {
 }
 
 // ------------------------------ End Media ------------------------------ //
+
+
+
+
+ul, li {
+    list-style: none;
+}
+
+// #container {
+//     width: 60%;
+//     margin: 0 20%;
+//     overflow: auto;
+// }
+
+.faq{
+    text-align: left !important;
+}
+
+h1 {
+    text-align: center;
+    margin: 1em 0;
+}
+
+
+.faq li {
+    padding: 1em;
+    border-radius: 30px;
+}
+
+.faq li.q {
+    font-weight: bold;
+    // font-size: 120%;
+    border-bottom: 1px #ccc solid;
+    cursor: pointer;
+    color: #f2cc0f;
+    background-color:#6453a6;
+}
+
+// .faq li.q:nth-child(1),
+// .faq li.q:nth-child(5),
+// .faq li.q:nth-child(9) {
+//     background-color:#6453a6;
+// }
+
+.faq li.a {
+    font-weight: bold;
+    // color: #6bba70;
+    background: #fff;
+    display: none;
+}
+
+// img {
+//     margin-right: .5em;
+// }
+
+// footer {
+//     height: 6em;
+//     padding: 2em;
+//     margin-top: 2em;
+// }
+
+// footer h3 {
+//     width: 50%;
+//     margin: 0 25%;
+// }
+
+// footer a {
+//     color: #6bba30;
+//     text-decoration: none;
+// }
+
+/********* MEDIA QUERIES ************/
+// @media (max-width: 800px) {
+//     #container {
+//         width: 90%;
+//         margin: 0 5%;
+//     }
+    
+//     .title {
+//         width: 90%;
+//         margin: 0 5%;
+//         height: 3.5em;
+//     }
+    
+//     .faq li {
+//         text-align: center;
+//     }
+    
+//     .faq li.a {
+//         width: 85%;
+//         margin-left: 5%;
+//     }
+    
+//     footer h3 {
+//         width: 90%;
+//         margin: 0 5%;
+//         text-align: center;
+//     }
+// }

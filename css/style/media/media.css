@@ -108,14 +108,47 @@ body::-webkit-scrollbar-thumb:hover {
   width: 255px;
 }
 
-.mediaTitle {
-  font-family: 'Henny Penny', cursive !important;
-  font-size: 4em;
+.videoAnim {
+  -webkit-animation-name: videoAnim;
+          animation-name: videoAnim;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s;
+  -webkit-animation-timing-function: steps(1, 2, 3);
+          animation-timing-function: steps(1, 2, 3);
+  visibility: visible !important;
 }
 
-.row {
-  -webkit-animation-name: fadeInUp;
-          animation-name: fadeInUp;
+@-webkit-keyframes videoAnim {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(20%, 100%, 0);
+            transform: translate3d(20%, 100%, 0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+
+@keyframes videoAnim {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(20%, 100%, 0);
+            transform: translate3d(20%, 100%, 0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+
+.containerGallery {
+  -webkit-animation-name: padeLeft;
+          animation-name: padeLeft;
   -webkit-animation-duration: 2s;
           animation-duration: 2s;
   -webkit-animation-delay: 0.1s;
@@ -123,6 +156,72 @@ body::-webkit-scrollbar-thumb:hover {
   -webkit-animation-timing-function: ease;
           animation-timing-function: ease;
   visibility: visible !important;
+}
+
+@-webkit-keyframes padeLeft {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(-100%, 0, 0);
+            transform: translate3d(-100%, 0, 0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+
+@keyframes padeLeft {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(-100%, 0, 0);
+            transform: translate3d(-100%, 0, 0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+
+.mediaTitle {
+  font-family: 'Henny Penny', cursive !important;
+  font-size: 4em;
+  -webkit-animation-name: mediaTitle;
+          animation-name: mediaTitle;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  visibility: visible !important;
+}
+
+@-webkit-keyframes mediaTitle {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+            transform: translate3d(0, 100%, 0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+
+@keyframes mediaTitle {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+            transform: translate3d(0, 100%, 0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+            transform: none;
+  }
 }
 
 .menu {

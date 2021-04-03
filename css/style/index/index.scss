@@ -172,6 +172,66 @@ body::-webkit-scrollbar-thumb {
 // ------------ Menu ------------ //
 
 
+.title{
+    animation-name: title;
+    animation-duration: 2s;	
+    animation-delay: 0.1s;
+    animation-timing-function: ease;	
+    visibility: visible !important;	 
+}
+
+@keyframes title {
+    0% {
+        opacity: 0;
+        transform: translate3d(0, 100%, 0)
+    }
+
+    100% {
+        opacity: 1;
+        transform: none
+    }
+}
+
+.menu2{
+    animation-name: fadeRight;
+    animation-duration: 2s;	
+    animation-delay: 0.1s;
+    animation-timing-function: ease;	
+    visibility: visible !important;	
+}
+
+.containerIframe{
+    animation-name: fadeLeft;
+    animation-duration: 2s;	
+    animation-delay: 0.1s;
+    animation-timing-function: ease;	
+    visibility: visible !important;	
+}
+
+@keyframes fadeRight {
+    0% {
+        opacity: 0;
+        transform: translate3d(100%, 0, 0)
+    }
+
+    100% {
+        opacity: 1;
+        transform: none
+    }
+}
+
+@keyframes fadeLeft {
+    0% {
+        opacity: 0;
+        transform: translate3d(-100%, 0, 0)
+    }
+
+    100% {
+        opacity: 1;
+        transform: none
+    }
+}
+
 .containerMenu{
     .row{
         animation-name: fadeInUp;

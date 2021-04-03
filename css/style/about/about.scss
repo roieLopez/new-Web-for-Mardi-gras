@@ -111,7 +111,45 @@ body::-webkit-scrollbar-thumb {
 
 // ------------ Menu ------------ //
 
+.titlePage{
+    animation-name: titlePage;
+    animation-duration: 2s;	
+    animation-delay: 0.1s;
+    animation-timing-function: ease;	
+    visibility: visible !important;	   
+}
 
+@keyframes titlePage {
+    0% {
+        opacity: 0;
+        transform: translate3d(0, 100%, 0)
+    }
+
+    100% {
+        opacity: 1;
+        transform: none
+    }
+}
+
+.containerRight{
+    animation-name: fadeRight;
+    animation-duration: 2s;	
+    animation-delay: 0.1s;
+    animation-timing-function: ease;	
+    visibility: visible !important;	
+}
+
+@keyframes fadeRight {
+    0% {
+        opacity: 0;
+        transform: translate3d(100%, 0, 0)
+    }
+
+    100% {
+        opacity: 1;
+        transform: none
+    }
+}
 .festivalImg {
     img{
         border-radius: 30%;

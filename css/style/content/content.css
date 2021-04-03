@@ -110,6 +110,7 @@ body::-webkit-scrollbar-thumb:hover {
 
 .container {
   width: 70% !important;
+  height: auto;
 }
 
 .container .accordion {
@@ -117,7 +118,7 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 .container .accordion div {
-  height: 20% !important;
+  min-height: 20% !important;
 }
 
 .container .accordion h3 {
@@ -125,6 +126,7 @@ body::-webkit-scrollbar-thumb:hover {
   background-color: #6453a6;
   border: none !important;
   color: #f2cc0f !important;
+  text-align: center;
 }
 
 .container .accordion h3:active {
@@ -138,9 +140,21 @@ body::-webkit-scrollbar-thumb:hover {
   color: #6453a6;
 }
 
-.row {
-  -webkit-animation-name: fadeInUp;
-          animation-name: fadeInUp;
+.accordion {
+  -webkit-animation-name: fadeRight;
+          animation-name: fadeRight;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  visibility: visible !important;
+}
+
+.titleContent {
+  -webkit-animation-name: fadeBottomToTop;
+          animation-name: fadeBottomToTop;
   -webkit-animation-duration: 2s;
           animation-duration: 2s;
   -webkit-animation-delay: 0.1s;
@@ -164,7 +178,33 @@ body::-webkit-scrollbar-thumb:hover {
   margin-left: .75rem;
 }
 
-@-webkit-keyframes fadeInUp {
+@-webkit-keyframes fadeRight {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(100%, 0, 0);
+            transform: translate3d(100%, 0, 0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+
+@keyframes fadeRight {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(100%, 0, 0);
+            transform: translate3d(100%, 0, 0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+
+@-webkit-keyframes fadeBottomToTop {
   0% {
     opacity: 0;
     -webkit-transform: translate3d(0, 100%, 0);
@@ -177,7 +217,7 @@ body::-webkit-scrollbar-thumb:hover {
   }
 }
 
-@keyframes fadeInUp {
+@keyframes fadeBottomToTop {
   0% {
     opacity: 0;
     -webkit-transform: translate3d(0, 100%, 0);
@@ -219,4 +259,38 @@ body::-webkit-scrollbar-thumb:hover {
     display: none;
   }
 }
+
+ul, li {
+  list-style: none;
+}
+
+.faq {
+  text-align: left !important;
+}
+
+h1 {
+  text-align: center;
+  margin: 1em 0;
+}
+
+.faq li {
+  padding: 1em;
+  border-radius: 30px;
+}
+
+.faq li.q {
+  font-weight: bold;
+  border-bottom: 1px #ccc solid;
+  cursor: pointer;
+  color: #f2cc0f;
+  background-color: #6453a6;
+}
+
+.faq li.a {
+  font-weight: bold;
+  background: #fff;
+  display: none;
+}
+
+/********* MEDIA QUERIES ************/
 /*# sourceMappingURL=content.css.map */
