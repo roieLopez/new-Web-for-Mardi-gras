@@ -3,14 +3,96 @@ body {
 
 }
 
-.stickyIcons{
-    .whatsapp{
+#myDiv {
+    display: none;
+}
+
+.stickyIcons {
+    .whatsapp {
         display: none;
     }
-    .call{
+
+    .call {
         display: none;
     }
 }
+
+// ---------------------- loader Settings ---------------------- //
+
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    height: 100%;
+}
+#loader {
+    display: block;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    width: 80px;
+    height: 80px;
+    margin: -75px 0 0 -75px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: #30C032;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+}
+#loader:before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: #8f6ed5;
+    -webkit-animation: spin 3s linear infinite;
+    animation: spin 3s linear infinite;
+}
+#loader:after {
+    content: "";
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    right: 15px;
+    bottom: 15px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: #2394F2;
+    -webkit-animation: spin 1.5s linear infinite;
+    animation: spin 1.5s linear infinite;
+}
+@-webkit-keyframes spin {
+    0%   {
+        -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+@keyframes spin {
+    0%   {
+        -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+
+// ---------------------- End loader Settings ---------------------- //
 
 // ---------------------- Scroll Body Settings ---------------------- //
 
@@ -25,6 +107,7 @@ body::-webkit-scrollbar-track {
 body::-webkit-scrollbar-thumb {
     background-color: #6453a6;
     border-radius: 30px;
+
     &:hover {
         background-color: #6453a6b4;
     }
@@ -137,7 +220,7 @@ body::-webkit-scrollbar-thumb {
     height: 540px;
     background-image: url(../../../img/slider/2.jpg);
     background-repeat: no-repeat;
-    background-position:center;
+    background-position: center;
     background-size: cover;
 }
 
@@ -172,12 +255,12 @@ body::-webkit-scrollbar-thumb {
 // ------------ Menu ------------ //
 
 
-.title{
+.title {
     animation-name: title;
-    animation-duration: 2s;	
+    animation-duration: 2s;
     animation-delay: 0.1s;
-    animation-timing-function: ease;	
-    visibility: visible !important;	 
+    animation-timing-function: ease;
+    visibility: visible !important;
 }
 
 @keyframes title {
@@ -192,20 +275,20 @@ body::-webkit-scrollbar-thumb {
     }
 }
 
-.menu2{
+.menu2 {
     animation-name: fadeRight;
-    animation-duration: 2s;	
+    animation-duration: 2s;
     animation-delay: 0.1s;
-    animation-timing-function: ease;	
-    visibility: visible !important;	
+    animation-timing-function: ease;
+    visibility: visible !important;
 }
 
-.containerIframe{
+.containerIframe {
     animation-name: fadeLeft;
-    animation-duration: 2s;	
+    animation-duration: 2s;
     animation-delay: 0.1s;
-    animation-timing-function: ease;	
-    visibility: visible !important;	
+    animation-timing-function: ease;
+    visibility: visible !important;
 }
 
 @keyframes fadeRight {
@@ -232,14 +315,14 @@ body::-webkit-scrollbar-thumb {
     }
 }
 
-.containerMenu{
-    .row{
+.containerMenu {
+    .row {
         animation-name: fadeInUp;
-        animation-duration: 2s;	
+        animation-duration: 2s;
         animation-delay: 0.1s;
-        animation-timing-function: ease;	
-        visibility: visible !important;	
-    }				
+        animation-timing-function: ease;
+        visibility: visible !important;
+    }
 }
 
 
@@ -254,7 +337,7 @@ body::-webkit-scrollbar-thumb {
         transform: none;
     }
 }
-	
+
 
 .bgFunders1 {
     img {
@@ -301,10 +384,12 @@ body::-webkit-scrollbar-thumb {
         }
     }
 }
+
 // ---------- winnersElement Show in Only 200px - 999px screen ---------- // 
-.winnersElement{
+.winnersElement {
     display: none;
 }
+
 // ----------  End winnersElement ---------- // 
 
 // ------------ End Menu ------------ //
@@ -312,12 +397,13 @@ body::-webkit-scrollbar-thumb {
 
 
 // ------------------------ Footer ------------------------ //
-.footer{
+.footer {
     color: #f2f2f2;
     width: 100%;
     height: 40px;
     background-color: #323233;
 }
+
 // ------------------------ End Footer ------------------------ //
 
 
@@ -377,9 +463,10 @@ body::-webkit-scrollbar-thumb {
 }
 
 @media (min-width:1000px) and (max-width: 1024px) {
-    .form-inline{
+    .form-inline {
         display: none;
     }
+
     .containerIframe {
         iframe {
             display: none;
@@ -391,50 +478,59 @@ body::-webkit-scrollbar-thumb {
             display: none;
         }
     }
-    
-.stickyIcons{
-    position:sticky !important;
-    top: 90% !important;
-    bottom: 0% !important;
-    z-index: 1 !important;
-    
-    .whatsapp {
+
+    .stickyIcons {
         position: sticky !important;
         top: 90% !important;
-        display:unset !important;
-
-        img {
-            width: 60px !important;
-            height: auto !important;
-            &:active{
-                transition: all 0.2s ease-in-out;
-                transform: scale(1.1);
-                animation: rotation 0.3s;
-            }
-        }
-    }
-    .call {
-
-        display: unset !important;
-        position: sticky !important;
-        top: 90% !important;
-        left: 100% !important;
-        right: 0px;
+        bottom: 0% !important;
         z-index: 1 !important;
-        img {
-            width: 60px !important;
-            height: auto !important;
-            &:active{
-                transition: all 0.2s ease-in-out !important;
-                transform: scale(1.1) !important;
-                animation: rotation 0.3s;
+
+        .whatsapp {
+            position: sticky !important;
+            top: 90% !important;
+            display: unset !important;
+
+            img {
+                width: 60px !important;
+                height: auto !important;
+
+                &:active {
+                    transition: all 0.2s ease-in-out;
+                    transform: scale(1.1);
+                    animation: rotation 0.3s;
+                }
+            }
+        }
+
+        .call {
+
+            display: unset !important;
+            position: sticky !important;
+            top: 90% !important;
+            left: 100% !important;
+            right: 0px;
+            z-index: 1 !important;
+
+            img {
+                width: 60px !important;
+                height: auto !important;
+
+                &:active {
+                    transition: all 0.2s ease-in-out !important;
+                    transform: scale(1.1) !important;
+                    animation: rotation 0.3s;
+                }
             }
         }
     }
-}
 }
 
 @media (min-width:200px) and (max-width: 999px) {
+    #preloader {
+        position: fixed;
+        top: 0;
+        left: 5%;
+    }
     .fontSizeMenu {
         font-size: 12px;
         font-weight: 400;
@@ -485,162 +581,170 @@ body::-webkit-scrollbar-thumb {
 
     @keyframes rotation {
         0% {
-            transform:rotate(0deg);
-        }			
+            transform: rotate(0deg);
+        }
+
         100% {
             transform: rotate(360deg);
-        }		
-    }
-
-
-.stickyIcons{
-    position:sticky !important;
-    top: 80% !important;
-    bottom: 0% !important;
-    z-index: 1 !important;
-    
-    .whatsapp {
-        position: sticky !important;
-        top: 90% !important;
-        display:unset !important;
-
-        img {
-            width: 60px !important;
-            height: auto !important;
-            &:active{
-                transition: all 0.2s ease-in-out;
-                transform: scale(1.1);
-                animation: rotation 0.3s;
-            }
         }
     }
-    .call {
 
-        display: unset !important;
+
+    .stickyIcons {
         position: sticky !important;
-        top: 90% !important;
-        left: 100% !important;
-        right: 0px;
+        top: 80% !important;
+        bottom: 0% !important;
         z-index: 1 !important;
-        img {
-            width: 60px !important;
-            height: auto !important;
-            &:active{
-                transition: all 0.2s ease-in-out !important;
-                transform: scale(1.1) !important;
-                animation: rotation 0.3s;
+
+        .whatsapp {
+            position: sticky !important;
+            top: 90% !important;
+            display: unset !important;
+
+            img {
+                width: 60px !important;
+                height: auto !important;
+
+                &:active {
+                    transition: all 0.2s ease-in-out;
+                    transform: scale(1.1);
+                    animation: rotation 0.3s;
+                }
+            }
+        }
+
+        .call {
+
+            display: unset !important;
+            position: sticky !important;
+            top: 90% !important;
+            left: 100% !important;
+            right: 0px;
+            z-index: 1 !important;
+
+            img {
+                width: 60px !important;
+                height: auto !important;
+
+                &:active {
+                    transition: all 0.2s ease-in-out !important;
+                    transform: scale(1.1) !important;
+                    animation: rotation 0.3s;
+                }
             }
         }
     }
-}
 
-.winnersElement {
-    z-index: 3;
-    position: relative;
-    bottom: 16px;
-    width: 100%;
-    height: 700px;
-    left: 0px;
-    text-align: center;
-    transition: .6s;
-    background-image: url(../../../img/element.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size:cover;
-    display: unset;
-    &:active{
-        transition: all 0.1s ease-in-out !important;
-        animation: rotation 0.3s;
+    .winnersElement {
+        z-index: 3;
+        position: relative;
+        bottom: 16px;
+        width: 100%;
+        height: 700px;
+        left: 0px;
+        text-align: center;
+        transition: .6s;
+        background-image: url(../../../img/element.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: unset;
+
+        &:active {
+            transition: all 0.1s ease-in-out !important;
+            animation: rotation 0.3s;
+        }
+
     }
 
-}
 
 
 
+    .winnersElement a {
+        position: relative;
+        top: 261px;
+        width: 11.1em;
+        height: 11.1em;
+        display: inline-block;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, .59);
+        text-decoration: none;
 
-.winnersElement a {
-    position: relative;
-    top: 261px;
-    width: 11.1em;
-    height: 11.1em;
-    display: inline-block;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, .59);
-    text-decoration: none;
-    &:active{
-        background-color: blueviolet;
-        opacity: 0.7;
-        transition: all ease-in-out 0.4s;
-        transform: scale(1.1) !important;
-    }
-}
-
-
-
-
-.winnersElement a #outter {
-    font-size: 1em;
-    position: absolute;
-    margin: .23em;
-    width: 10.64em;
-    height: 10.64em;
-    border-radius: 50%;
-    background: #59258e url(https://www.mardigrasneworleans.com/templates/client/imagesNew/xcolorwheel.png.pagespeed.ic.67t0nvuILD.png) no-repeat center;
-    transition: .6s
-}
-
-.winnersElement a .inner {
-    position: relative;
-    width: 10em;
-    height: 10em;
-    margin: .54em;
-    border-radius: 50%;
-    text-align: center;
-    background: #fff url(../../../img/element2.png) center;
-    box-shadow: 1px 1px 8px rgba(0, 0, 0, .48);
-    transform: rotate(-18deg);
-}
-
-
-
-.winnersElement {
-    a {
-    .inner {
-        span {
-            display: block;
-            font-family: 'Henny Penny', cursive;
-            color: #2a292b;
-            line-height: 1.1em;
-            text-shadow: 1px 1px 5px rgba(0, 0, 0, .32);
-            text-decoration: none;
-            opacity: 0.5;
-
-        }
-        :nth-child(1) {
-            color: #f2cc0f;
-            font-size: 1.7em;
-            line-height: 1em
-        
-        }
-        :nth-child(2) {
-            color: #3f940c;
-            font-size: 2.5em;
-            line-height: 1em
+        &:active {
+            background-color: blueviolet;
+            opacity: 0.7;
+            transition: all ease-in-out 0.4s;
+            transform: scale(1.1) !important;
         }
     }
-}
-
-}
 
 
 
-.winnersElement a:hover #star {
-    opacity: 1
-}
 
-.winnersElement a:hover #outter {
-    box-shadow: 0 0 17px white, 0 0 30px white, 0 0 70px white, 0 0 160px white
-}
+    .winnersElement a #outter {
+        font-size: 1em;
+        position: absolute;
+        margin: .23em;
+        width: 10.64em;
+        height: 10.64em;
+        border-radius: 50%;
+        background: #59258e url(https://www.mardigrasneworleans.com/templates/client/imagesNew/xcolorwheel.png.pagespeed.ic.67t0nvuILD.png) no-repeat center;
+        transition: .6s
+    }
+
+    .winnersElement a .inner {
+        position: relative;
+        width: 10em;
+        height: 10em;
+        margin: .54em;
+        border-radius: 50%;
+        text-align: center;
+        background: #fff url(../../../img/element2.png) center;
+        box-shadow: 1px 1px 8px rgba(0, 0, 0, .48);
+        transform: rotate(-18deg);
+    }
+
+
+
+    .winnersElement {
+        a {
+            .inner {
+                span {
+                    display: block;
+                    font-family: 'Henny Penny', cursive;
+                    color: #2a292b;
+                    line-height: 1.1em;
+                    text-shadow: 1px 1px 5px rgba(0, 0, 0, .32);
+                    text-decoration: none;
+                    opacity: 0.5;
+
+                }
+
+                :nth-child(1) {
+                    color: #f2cc0f;
+                    font-size: 1.7em;
+                    line-height: 1em
+                }
+
+                :nth-child(2) {
+                    color: #3f940c;
+                    font-size: 2.5em;
+                    line-height: 1em
+                }
+            }
+        }
+
+    }
+
+
+
+    .winnersElement a:hover #star {
+        opacity: 1
+    }
+
+    .winnersElement a:hover #outter {
+        box-shadow: 0 0 17px white, 0 0 30px white, 0 0 70px white, 0 0 160px white
+    }
 }
 
 // ------------------------------ End Media ------------------------------ //
