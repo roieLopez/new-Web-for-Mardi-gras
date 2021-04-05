@@ -1,0 +1,297 @@
+body {
+  background-color: #f2f2f2;
+}
+
+.stickyIcons .whatsapp {
+  display: none;
+}
+
+.stickyIcons .call {
+  display: none;
+}
+
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  height: 100%;
+}
+
+#loader {
+  display: block;
+  position: relative;
+  left: 50%;
+  top: 50%;
+  width: 80px;
+  height: 80px;
+  margin: -75px 0 0 -75px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  border-top-color: #30C032;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+#loader:before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  right: 5px;
+  bottom: 5px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  border-top-color: #8f6ed5;
+  -webkit-animation: spin 3s linear infinite;
+  animation: spin 3s linear infinite;
+}
+
+#loader:after {
+  content: "";
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  right: 15px;
+  bottom: 15px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  border-top-color: #2394F2;
+  -webkit-animation: spin 1.5s linear infinite;
+  animation: spin 1.5s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+body::-webkit-scrollbar {
+  width: 1.1em;
+}
+
+body::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0px 0px 6px #6453a6b4;
+          box-shadow: inset 0px 0px 6px #6453a6b4;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #6453a6;
+  border-radius: 30px;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background-color: #6453a6b4;
+}
+
+.navbar-nav {
+  margin-left: 23px;
+}
+
+.navbar-toggler-icon:active {
+  -webkit-transition: all ease-in-out 0.1s;
+  transition: all ease-in-out 0.1s;
+  -webkit-transform: scaleX(1.2);
+          transform: scaleX(1.2);
+}
+
+.togglerPosi {
+  margin-right: 83px;
+}
+
+.navStyle {
+  background-color: #0d0d0d !important;
+  font-family: 'Henny Penny', cursive;
+}
+
+.navStyle .navTextColor {
+  color: #6453a6 !important;
+  font-weight: 700;
+}
+
+.navStyle .navTextColor:active {
+  -webkit-transition: ease-in-out all 0.1s;
+  transition: ease-in-out all 0.1s;
+  -webkit-transform: scaleX(1.2);
+          transform: scaleX(1.2);
+}
+
+.navStyle .navTextColor2 {
+  color: #8cbf3f !important;
+}
+
+.navStyle .navTextColor2:active {
+  -webkit-transition: ease-in-out all 0.1s;
+  transition: ease-in-out all 0.1s;
+  -webkit-transform: scaleX(1.2);
+          transform: scaleX(1.2);
+}
+
+.navStyle .navTextColor3 {
+  color: #f2cc0f !important;
+}
+
+.navStyle .navTextColor3:active {
+  -webkit-transition: ease-in-out all 0.1s;
+  transition: ease-in-out all 0.1s;
+  -webkit-transform: scaleX(1.2);
+          transform: scaleX(1.2);
+}
+
+.navStyle .navTextColor4 {
+  color: #6453a6 !important;
+}
+
+.navStyle .navTextColor4:active {
+  -webkit-transition: ease-in-out all 0.1s;
+  transition: ease-in-out all 0.1s;
+  -webkit-transform: scaleX(1.2);
+          transform: scaleX(1.2);
+}
+
+.navStyle .navTextColor5 {
+  color: #8cbf3f !important;
+}
+
+.navStyle .navTextColor5:active {
+  -webkit-transition: ease-in-out all 0.1s;
+  transition: ease-in-out all 0.1s;
+  -webkit-transform: scaleX(1.2);
+          transform: scaleX(1.2);
+}
+
+.logo {
+  width: 255px;
+}
+
+.titleContact {
+  font-size: 3em !important;
+  font-family: 'Henny Penny', cursive !important;
+}
+
+form {
+  -webkit-transition: all 4s ease-in-out;
+  transition: all 4s ease-in-out;
+}
+
+.contact-control {
+  width: 70%;
+  background: transparent;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid gray;
+  color: gray;
+  font-size: 18px;
+  margin-bottom: 16px;
+}
+
+.btnSend {
+  background-color: #6453a6;
+  border-color: transparent;
+  color: white;
+  height: 45px;
+}
+
+.btnSend:active {
+  background-color: #9993b3;
+  cursor: pointer;
+}
+
+.row {
+  -webkit-animation-name: fadeInUp;
+          animation-name: fadeInUp;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  visibility: visible !important;
+}
+
+.menu {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.menu h2 {
+  font-weight: 400;
+}
+
+.menu p {
+  margin-right: .75rem;
+  margin-left: .75rem;
+}
+
+@-webkit-keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+            transform: translate3d(0, 100%, 0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+            transform: translate3d(0, 100%, 0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+
+.footer {
+  color: #f2f2f2;
+  width: 100%;
+  height: 40px;
+  background-color: #323233;
+  text-align: center;
+}
+
+@media only screen and (min-width: 1000px) and (max-width: 1024px) {
+  .navbar-collapse {
+    position: relative;
+    left: 14%;
+  }
+  .form-inline {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 200px) and (max-width: 999px) {
+  #preloader {
+    position: fixed;
+    top: 0;
+    left: 6%;
+  }
+  .titleContact {
+    font-size: 1.5em !important;
+  }
+}
+/*# sourceMappingURL=contact.css.map */
