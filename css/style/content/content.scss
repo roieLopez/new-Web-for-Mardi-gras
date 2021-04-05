@@ -230,16 +230,6 @@ body::-webkit-scrollbar-thumb {
 
 }
 
-.titleContent {
-    animation-name: fadeBottomToTop;
-    animation-duration: 2s;
-    animation-delay: 0.1s;
-    animation-timing-function: ease;
-    visibility: visible !important;
-
-}
-
-
 .menu {
     margin-bottom: 1.5rem;
     text-align: center;
@@ -260,18 +250,6 @@ body::-webkit-scrollbar-thumb {
     0% {
         opacity: 0;
         transform: translate3d(100%, 0, 0)
-    }
-
-    100% {
-        opacity: 1;
-        transform: none
-    }
-}
-
-@keyframes fadeBottomToTop {
-    0% {
-        opacity: 0;
-        transform: translate3d(0, 100%, 0)
     }
 
     100% {

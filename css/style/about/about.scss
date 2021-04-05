@@ -190,25 +190,7 @@ body::-webkit-scrollbar-thumb {
 
 // ------------ Menu ------------ //
 
-.titlePage{
-    animation-name: titlePage;
-    animation-duration: 2s;	
-    animation-delay: 0.1s;
-    animation-timing-function: ease;	
-    visibility: visible !important;	   
-}
 
-@keyframes titlePage {
-    0% {
-        opacity: 0;
-        transform: translate3d(0, 100%, 0)
-    }
-
-    100% {
-        opacity: 1;
-        transform: none
-    }
-}
 
 .containerRight{
     animation-name: fadeRight;
@@ -278,22 +260,11 @@ body::-webkit-scrollbar-thumb {
     }
 }
 
-
 .menu{
     margin-bottom: 1.5rem;
     text-align: center;
 }
 
-
-// .menu .col-6,
-// .col-12,
-// .col-sm-6,
-// .col-md-6,
-// .col-lg-6,
-// .col-xl-6 {
-//     margin-bottom: 1.5rem;
-//     text-align: center;
-// }
 
 .menu h2 {
     font-weight: 400;

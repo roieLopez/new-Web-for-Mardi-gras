@@ -237,35 +237,7 @@ body::-webkit-scrollbar-thumb {
 .mediaTitle{
     font-family: 'Henny Penny', cursive !important; 
     font-size: 4em;
-    animation-name: mediaTitle;
-    animation-duration: 2s;	
-    animation-delay: 0.1s;
-    animation-timing-function: ease;	
-    visibility: visible !important;	
 }
-
-@keyframes mediaTitle {
-    0% {
-        opacity: 0;
-        transform: translate3d(0, 100%, 0)
-    }
-
-    100% {
-        opacity: 1;
-        transform: none
-    }
-}
-
-    // .row {
-    //     animation-name: fadeInUp;
-    //     animation-duration: 2s;
-    //     animation-delay: 0.1s;
-    //     animation-timing-function: ease;
-    //     visibility: visible !important;
-
-    // }
-
-
 
     .menu {
         margin-bottom: 1.5rem;

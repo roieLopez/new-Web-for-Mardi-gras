@@ -225,18 +225,6 @@ body::-webkit-scrollbar-thumb:hover {
   visibility: visible !important;
 }
 
-.titleContent {
-  -webkit-animation-name: fadeBottomToTop;
-          animation-name: fadeBottomToTop;
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
-  -webkit-animation-delay: 0.1s;
-          animation-delay: 0.1s;
-  -webkit-animation-timing-function: ease;
-          animation-timing-function: ease;
-  visibility: visible !important;
-}
-
 .menu {
   margin-bottom: 1.5rem;
   text-align: center;
@@ -269,32 +257,6 @@ body::-webkit-scrollbar-thumb:hover {
     opacity: 0;
     -webkit-transform: translate3d(100%, 0, 0);
             transform: translate3d(100%, 0, 0);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: none;
-            transform: none;
-  }
-}
-
-@-webkit-keyframes fadeBottomToTop {
-  0% {
-    opacity: 0;
-    -webkit-transform: translate3d(0, 100%, 0);
-            transform: translate3d(0, 100%, 0);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: none;
-            transform: none;
-  }
-}
-
-@keyframes fadeBottomToTop {
-  0% {
-    opacity: 0;
-    -webkit-transform: translate3d(0, 100%, 0);
-            transform: translate3d(0, 100%, 0);
   }
   100% {
     opacity: 1;
