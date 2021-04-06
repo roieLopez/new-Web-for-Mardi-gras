@@ -3,13 +3,16 @@ body {
 
 }
 
-#myDiv {
-    display: none;
+.hideAllPage {
+    // visibility:hidden;
+    display: none ;
+    // visibility: hidden;
 }
+
 
 .stickyIcons {
     .whatsapp {
-        display: none;
+        display:none;
     }
 
     .call {
@@ -210,14 +213,14 @@ body::-webkit-scrollbar-thumb {
 }
 
 .sliderPng {
-    height: 540px;
+    height: 650px;
     background-image: url(../../../img/slider/1.png);
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 .sliderPng2 {
-    height: 540px;
+    height: 650px;
     background-image: url(../../../img/slider/2.jpg);
     background-repeat: no-repeat;
     background-position: center;
@@ -225,7 +228,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .sliderPng3 {
-    height: 540px;
+    height: 650px;
     background-image: url(../../../img/slider/3.jpg);
     background-repeat: no-repeat;
     background-position: center;
@@ -233,7 +236,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .sliderPng4 {
-    height: 540px;
+    height: 650px;
     background-image: url(../../../img/slider/4.jpg);
     background-repeat: no-repeat;
     background-position: center;
@@ -241,7 +244,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .sliderPng5 {
-    height: 540px;
+    height: 650px;
     background-image: url(../../../img/slider/5.jpg);
     background-repeat: no-repeat;
     background-position: center;
@@ -261,6 +264,7 @@ body::-webkit-scrollbar-thumb {
     animation-delay: 0.1s;
     animation-timing-function: ease;
     visibility: visible !important;
+
 }
 
 @keyframes title {
@@ -275,7 +279,7 @@ body::-webkit-scrollbar-thumb {
     }
 }
 
-.menu2 {
+.animationIframeRight {
     animation-name: fadeRight;
     animation-duration: 2s;
     animation-delay: 0.1s;
@@ -283,7 +287,7 @@ body::-webkit-scrollbar-thumb {
     visibility: visible !important;
 }
 
-.containerIframe {
+.animationIframeLeft {
     animation-name: fadeLeft;
     animation-duration: 2s;
     animation-delay: 0.1s;
@@ -315,15 +319,25 @@ body::-webkit-scrollbar-thumb {
     }
 }
 
-.containerMenu {
-    .row {
+// .containerMenu {
+//     .row {
+//         animation-name: fadeInUp;
+//         animation-duration: 2s;
+//         animation-delay: 0.1s;
+//         animation-timing-function: ease;
+//         visibility: visible !important;
+//     }
+// }
+
+
+    .animationMenu {
         animation-name: fadeInUp;
         animation-duration: 2s;
         animation-delay: 0.1s;
         animation-timing-function: ease;
         visibility: visible !important;
     }
-}
+
 
 
 @keyframes fadeInUp {
@@ -421,7 +435,7 @@ body::-webkit-scrollbar-thumb {
         }
     }
 
-    .menu2 {
+    .containerIframeRight {
         iframe {
             height: 153vh;
             width: 40vh;
@@ -438,7 +452,7 @@ body::-webkit-scrollbar-thumb {
         }
     }
 
-    .menu2 {
+    .containerIframeRight {
         iframe {
             height: 153vh;
             width: 30vh;
@@ -454,7 +468,7 @@ body::-webkit-scrollbar-thumb {
         }
     }
 
-    .menu2 {
+    .containerIframeRight {
         iframe {
             height: 153vh;
             width: 25vh;
@@ -473,7 +487,7 @@ body::-webkit-scrollbar-thumb {
         }
     }
 
-    .menu2 {
+    .containerIframeRight {
         iframe {
             display: none;
         }
@@ -547,7 +561,7 @@ body::-webkit-scrollbar-thumb {
         }
     }
 
-    .menu2 {
+    .containerIframeRight {
         iframe {
             display: none;
             visibility: hidden;

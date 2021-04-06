@@ -2,7 +2,7 @@ body {
   background-color: #f2f2f2;
 }
 
-#myDiv {
+.hideAllPage {
   display: none;
 }
 
@@ -209,14 +209,14 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 .sliderPng {
-  height: 540px;
+  height: 650px;
   background-image: url(../../../img/slider/1.png);
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .sliderPng2 {
-  height: 540px;
+  height: 650px;
   background-image: url(../../../img/slider/2.jpg);
   background-repeat: no-repeat;
   background-position: center;
@@ -224,7 +224,7 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 .sliderPng3 {
-  height: 540px;
+  height: 650px;
   background-image: url(../../../img/slider/3.jpg);
   background-repeat: no-repeat;
   background-position: center;
@@ -232,7 +232,7 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 .sliderPng4 {
-  height: 540px;
+  height: 650px;
   background-image: url(../../../img/slider/4.jpg);
   background-repeat: no-repeat;
   background-position: center;
@@ -240,7 +240,7 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 .sliderPng5 {
-  height: 540px;
+  height: 650px;
   background-image: url(../../../img/slider/5.jpg);
   background-repeat: no-repeat;
   background-position: center;
@@ -285,7 +285,7 @@ body::-webkit-scrollbar-thumb:hover {
   }
 }
 
-.menu2 {
+.animationIframeRight {
   -webkit-animation-name: fadeRight;
           animation-name: fadeRight;
   -webkit-animation-duration: 2s;
@@ -297,7 +297,7 @@ body::-webkit-scrollbar-thumb:hover {
   visibility: visible !important;
 }
 
-.containerIframe {
+.animationIframeLeft {
   -webkit-animation-name: fadeLeft;
           animation-name: fadeLeft;
   -webkit-animation-duration: 2s;
@@ -361,7 +361,7 @@ body::-webkit-scrollbar-thumb:hover {
   }
 }
 
-.containerMenu .row {
+.animationMenu {
   -webkit-animation-name: fadeInUp;
           animation-name: fadeInUp;
   -webkit-animation-duration: 2s;
@@ -460,7 +460,7 @@ body::-webkit-scrollbar-thumb:hover {
     height: 153vh;
     width: 40vh;
   }
-  .menu2 iframe {
+  .containerIframeRight iframe {
     height: 153vh;
     width: 40vh;
   }
@@ -471,7 +471,7 @@ body::-webkit-scrollbar-thumb:hover {
     height: 153vh;
     width: 30vh;
   }
-  .menu2 iframe {
+  .containerIframeRight iframe {
     height: 153vh;
     width: 30vh;
   }
@@ -482,7 +482,7 @@ body::-webkit-scrollbar-thumb:hover {
     width: 22vh;
     height: 153vh;
   }
-  .menu2 iframe {
+  .containerIframeRight iframe {
     height: 153vh;
     width: 25vh;
   }
@@ -495,7 +495,7 @@ body::-webkit-scrollbar-thumb:hover {
   .containerIframe iframe {
     display: none;
   }
-  .menu2 iframe {
+  .containerIframeRight iframe {
     display: none;
   }
   .stickyIcons {
@@ -563,7 +563,7 @@ body::-webkit-scrollbar-thumb:hover {
     display: none;
     visibility: hidden;
   }
-  .menu2 iframe {
+  .containerIframeRight iframe {
     display: none;
     visibility: hidden;
   }

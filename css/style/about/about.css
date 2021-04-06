@@ -254,18 +254,6 @@ body::-webkit-scrollbar-thumb:hover {
   text-align: left;
 }
 
-.containerMenu .containerMenu2 .row {
-  -webkit-animation-name: fadeInUp;
-          animation-name: fadeInUp;
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
-  -webkit-animation-delay: 0.1s;
-          animation-delay: 0.1s;
-  -webkit-animation-timing-function: ease;
-          animation-timing-function: ease;
-  visibility: visible !important;
-}
-
 .menu {
   margin-bottom: 1.5rem;
   text-align: center;
@@ -383,6 +371,17 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 @media only screen and (min-width: 200px) and (max-width: 999px) {
+  .animationMenuAbout {
+    -webkit-animation-name: fadeRight;
+            animation-name: fadeRight;
+    -webkit-animation-duration: 2s;
+            animation-duration: 2s;
+    -webkit-animation-delay: 0.1s;
+            animation-delay: 0.1s;
+    -webkit-animation-timing-function: ease;
+            animation-timing-function: ease;
+    visibility: visible !important;
+  }
   #preloader {
     position: fixed;
     top: 0;

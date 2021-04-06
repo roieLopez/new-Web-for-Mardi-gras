@@ -205,7 +205,7 @@ body::-webkit-scrollbar-thumb {
 @keyframes videoAnim {
     0% {
         opacity: 0;
-        transform: translate3d(20%, 100%, 0)
+        transform: translate3d(100%, 0, 0)
     }
 
     100% {
