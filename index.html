@@ -12,71 +12,75 @@
   <link href="https://fonts.googleapis.com/css2?family=Henny+Penny&display=swap" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,700&display=swap" rel="stylesheet">
-  <!-- <script src="./js/preloader.js"></script> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
   <title>Document</title>
+
 </head>
 
-<body onload="myFunction()">
-    <div id="preloader">
-      <div id="loader"></div>
+<body onload="loader()">
+  <div id="preloader">
+    <div id="loader"></div>
   </div>
 
-  <div style="display:none;" id="myDiv">
+  <div class="hideAllPage">
 
     <!---------------- logo ----------------------->
 
+<header>
+  <div class="d-flex justify-content-center align-items-center" href="#">
+    <div>
+      <img src="./img/logo2.png" class="logo" alt="logo">
+    </div>
 
-    <div class="d-flex justify-content-center align-items-center" href="#">
-      <div>
-        <img src="./img/logo2.png" class="logo" alt="logo">
-      </div>
+  </div>
+  <!-------------------------- end logo -------------------->
+
+  <!--------------------------- nav Bar ------------------------->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light navStyle">
+
+
+    <div class="togglerPosi"></div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active pr-4">
+          <a class="nav-link navTextColor" href="./index.html">HOME <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item pr-4">
+          <a class="nav-link navTextColor2" href="./about.html">ABOUT</a>
+        </li>
+        <li class="nav-item pr-4">
+          <a class="nav-link navTextColor3" href="./media.html">MEDIA</a>
+        </li>
+        <li class="nav-item pr-4">
+          <a class="nav-link navTextColor4" href="./content.html">CONTENT</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link navTextColor5" href="./contact.html">CONTACT</a>
+        </li>
+      </ul>
+
+      <form class="form-inline pl-4 my-2 my-lg-0 mr-5">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0 searchNav text-white" type="submit">Search</button>
+      </form>
 
     </div>
-    <!-------------------------- end logo -------------------->
-
-    <!--------------------------- nav Bar ------------------------->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light navStyle">
-
-
-      <div class="togglerPosi"></div>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-
-
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active pr-4">
-            <a class="nav-link navTextColor" href="./index.html">HOME <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item pr-4">
-            <a class="nav-link navTextColor2" href="./about.html">ABOUT</a>
-          </li>
-          <li class="nav-item pr-4">
-            <a class="nav-link navTextColor3" href="./media.html">MEDIA</a>
-          </li>
-          <li class="nav-item pr-4">
-            <a class="nav-link navTextColor4" href="./content.html">CONTENT</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link navTextColor5" href="./contact.html">CONTACT</a>
-          </li>
-        </ul>
-
-        <form class="form-inline pl-4 my-2 my-lg-0 mr-5">
-          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success my-2 my-sm-0 searchNav text-white" type="submit">Search</button>
-        </form>
-
-      </div>
+    <div class="ml-5">
       <div class="ml-5">
-        <div class="ml-5">
-        </div>
       </div>
-    </nav>
-    <!------------------------------- End Nav Bar ---------------------------->
+    </div>
+  </nav>
+  <!------------------------------- End Nav Bar ---------------------------->
+</header>
+
 
     <!----------------------- carousel ------------------------------------------>
     <div id="carouselExampleIndicators" class="carousel slider p-0" data-ride="carousel">
@@ -140,7 +144,7 @@
     <!------------------ End stickyIcons -------------------->
     <!---------------------------- Menu -------------------------->
     <div class="container-fluid menu pt-xl-5 col-12">
-      <h1 class="pb-5 title" style="color: gray;">We Offer &#9829;</h1>
+      <h1 class="pb-5 titleWeOffer" style="display: none; color: gray;">We Offer &#9829;</h1>
       <hr class="pb-5" style="width: 20%;">
       <div class="row">
         <div class="col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2 containerIframe">
@@ -148,9 +152,8 @@
         </div>
 
 
-        <div class="container containerMenu col-12 col-sm-12 col-md-12 col-lg-8 col-xl-8"
-          style="animation-delay: 0.1s; visibility: visible; animation-name: fadeInUp;">
-          <div class="row">
+        <div class="container col-12 col-sm-12 col-md-12 col-lg-8 col-xl-8">
+          <div class="row containerMenu">
 
             <!-- Sheraton Hotel -->
             <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 fontSizeMenu">
@@ -282,7 +285,7 @@
         </div>
 
 
-        <div class="col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2 menu2">
+        <div class="col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2 containerIframeRight">
           <div>
             <div class="scroll">
 
@@ -322,28 +325,39 @@
   </div>
 
 
-
-
-</body>
-
-<script src="./js/menu.js"></script>
-<!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-  integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
-</script> -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+  <script src="./js/jquery-3.5.1.min.js"></script>
+  <script src="./js/scroll/scroll.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
   integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous">
 </script>
+</body>
+
+
+
 <script>
+  // setTimeout(function() { 
+  //         $this.attr('disabled', false);
+  //         $this.val('Submit');
+  //     }, 2000);
+
   var myVar;
 
-  function myFunction() {
-    myVar = setTimeout(showPage,1000);
+  function loader() {
+    myVar = setTimeout(showPage, 1000);
   }
 
+  // function myFunction() {
+  //   myVar = setTimeout(showPage,1000);
+  // }
+
+
   function showPage() {
-    document.getElementById("preloader").style.display = "none";
-    document.getElementById("myDiv").style.display = "block";
+    $('#preloader').hide();
+    $('.hideAllPage').show();
+    // document.getElementById("preloader").style.visibility = "hidden";
+    // document.getElementById("myDiv").style.display = "unset";
+    // document.getElementById("myDiv").style.visibility = "unset";
   }
 </script>
+
 </html>
