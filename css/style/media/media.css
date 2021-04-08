@@ -181,6 +181,10 @@ body::-webkit-scrollbar-thumb:hover {
   width: 255px;
 }
 
+.fancybox-thumbs__list a:before {
+  border: 3px solid #6453a6 !important;
+}
+
 .videoAnim {
   -webkit-animation-name: videoAnim;
           animation-name: videoAnim;

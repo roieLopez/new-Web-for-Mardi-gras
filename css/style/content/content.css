@@ -181,20 +181,31 @@ body::-webkit-scrollbar-thumb:hover {
   width: 255px;
 }
 
-.container {
-  width: 70% !important;
-  height: auto;
+.containerQuestion {
+  width: 500px !important;
+  line-height: 35px;
+  background-color: #6453a6;
+  color: white;
+  border-radius: 15px;
 }
 
-.container .accordion {
+.containerQuestion .question {
+  border-bottom: 1px solid white;
+}
+
+.containerQuestion .Answer {
   text-align: left !important;
+  padding: 15px;
+  background-color: white;
+  color: black;
+  border-bottom: 1px solid white;
 }
 
-.container .accordion div {
+.containerQuestion .Answer div {
   min-height: 20% !important;
 }
 
-.container .accordion h3 {
+.containerQuestion .Answer h3 {
   font-weight: 600 !important;
   background-color: #6453a6;
   border: none !important;
@@ -202,7 +213,7 @@ body::-webkit-scrollbar-thumb:hover {
   text-align: center;
 }
 
-.container .accordion h3:active {
+.containerQuestion .Answer h3:active {
   color: white;
   border: none !important;
 }

@@ -190,11 +190,22 @@ body::-webkit-scrollbar-thumb {
 // ------------ Menu ------------ //
 
 
-.container{
-    width: 70% !important;
-    height: auto;
-    .accordion{
+.containerQuestion{
+    width: 500px !important;
+    line-height: 35px;
+    background-color: #6453a6;
+    color: white;
+    border-radius: 15px;
+    .question{
+        border-bottom: 1px solid white;
+    }
+    .Answer{
         text-align: left !important;
+        padding: 15px;
+        background-color: white;
+        // color: #f2cc0f;
+        color: black;
+        border-bottom: 1px solid white;
     div{
         min-height: 20% !important;
         // background-color: red;

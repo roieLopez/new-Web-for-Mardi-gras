@@ -191,7 +191,10 @@ body::-webkit-scrollbar-thumb {
 // ------------ Menu ------------ //
 
 
-
+.fancybox-thumbs__list a:before {
+    border: 3px solid #6453a6 !important;
+    // border-radius: 15px !important;
+}
 
 .videoAnim{
     // display: none !important;
