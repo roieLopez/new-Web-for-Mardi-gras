@@ -183,21 +183,22 @@ body::-webkit-scrollbar-thumb:hover {
 
 .containerQuestion {
   width: 500px !important;
-  line-height: 35px;
+  cursor: pointer;
   background-color: #6453a6;
   color: white;
   border-radius: 15px;
 }
 
 .containerQuestion .question {
+  line-height: 40px;
   border-bottom: 1px solid white;
+  border-radius: 8px;
 }
 
 .containerQuestion .Answer {
   text-align: left !important;
   padding: 15px;
-  background-color: white;
-  color: black;
+  color: #f2cc0f;
   border-bottom: 1px solid white;
 }
 
@@ -221,7 +222,7 @@ body::-webkit-scrollbar-thumb:hover {
 .titleContent {
   font-size: 3em !important;
   font-family: 'Henny Penny', cursive !important;
-  color: #6453a6;
+  color: #8cbf3f;
 }
 
 .accordion {

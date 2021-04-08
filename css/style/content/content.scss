@@ -192,19 +192,20 @@ body::-webkit-scrollbar-thumb {
 
 .containerQuestion{
     width: 500px !important;
-    line-height: 35px;
+    cursor: pointer;
     background-color: #6453a6;
     color: white;
     border-radius: 15px;
     .question{
+        line-height: 40px;
         border-bottom: 1px solid white;
+        border-radius: 8px;
     }
     .Answer{
         text-align: left !important;
         padding: 15px;
-        background-color: white;
-        // color: #f2cc0f;
-        color: black;
+        color: #f2cc0f;  
+        // color: black;
         border-bottom: 1px solid white;
     div{
         min-height: 20% !important;
@@ -228,7 +229,7 @@ body::-webkit-scrollbar-thumb {
 .titleContent {
     font-size: 3em !important;
     font-family: 'Henny Penny', cursive !important;
-    color: #6453a6;
+    color: #8cbf3f;
 }
 
 
