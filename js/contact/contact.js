@@ -13,5 +13,6 @@ let btn = document.querySelector('.btnSend');
 // });
 
 btn.addEventListener('click', function () {
-localStorage.setItem( 'data' , ` fname : ${fname.value} || lname : ${lname.value} || email : ${email.value} || message : ${message.value}`);
+        localStorage.setItem('data', ` fname : ${fname.value} || lname : ${lname.value} || email : ${email.value} || message : ${message.value}`);
 });
+
