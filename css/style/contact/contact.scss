@@ -1,8 +1,10 @@
 body {
     background-color: #f2f2f2;
-
 }
 
+.hideAllPage {
+    display: none;
+}
 
 .stickyIcons {
     .whatsapp {
@@ -14,7 +16,7 @@ body {
     }
 }
 
-// ---------------------- loader Settings ---------------------- //
+// ---------------------- [-loader Settings-] ---------------------- //
 
 #preloader {
     position: fixed;
@@ -23,6 +25,7 @@ body {
     min-width: 100%;
     height: 100%;
 }
+
 #loader {
     display: block;
     position: relative;
@@ -37,6 +40,7 @@ body {
     -webkit-animation: spin 2s linear infinite;
     animation: spin 2s linear infinite;
 }
+
 #loader:before {
     content: "";
     position: absolute;
@@ -50,6 +54,7 @@ body {
     -webkit-animation: spin 3s linear infinite;
     animation: spin 3s linear infinite;
 }
+
 #loader:after {
     content: "";
     position: absolute;
@@ -63,24 +68,28 @@ body {
     -webkit-animation: spin 1.5s linear infinite;
     animation: spin 1.5s linear infinite;
 }
+
 @-webkit-keyframes spin {
-    0%   {
+    0% {
         -webkit-transform: rotate(0deg);
         -ms-transform: rotate(0deg);
         transform: rotate(0deg);
     }
+
     100% {
         -webkit-transform: rotate(360deg);
         -ms-transform: rotate(360deg);
         transform: rotate(360deg);
     }
 }
+
 @keyframes spin {
-    0%   {
+    0% {
         -webkit-transform: rotate(0deg);
         -ms-transform: rotate(0deg);
         transform: rotate(0deg);
     }
+
     100% {
         -webkit-transform: rotate(360deg);
         -ms-transform: rotate(360deg);
@@ -89,9 +98,9 @@ body {
 }
 
 
-// ---------------------- End loader Settings ---------------------- //
+// ---------------------- [-End loader Settings-] ---------------------- //
 
-// ---------------------- Scroll Body Settings ---------------------- //
+// ---------------------- [-Scroll Body Settings-] ---------------------- //
 
 body::-webkit-scrollbar {
     width: 1.1em;
@@ -111,10 +120,10 @@ body::-webkit-scrollbar-thumb {
     }
 }
 
-// ---------------------- End Scroll Body Settings ---------------------- //
+// ---------------------- [-End Scroll Body Settings-] ---------------------- //
 
-// ---------------------- Nav Bar ---------------------- //
-.navbar-nav{
+// ---------------------- [-Nav Bar-] ---------------------- //
+.navbar-nav {
     margin-left: 23px;
 }
 
@@ -184,9 +193,9 @@ body::-webkit-scrollbar-thumb {
     width: 255px;
 }
 
-// ---------------------- End Nav Bar ---------------------- //
+// ---------------------- [-End Nav Bar-] ---------------------- //
 
-// ------------ Menu ------------ //
+// ------------ [-Menu-] ------------ //
 
 .titleContact {
     font-size: 3em !important;
@@ -208,11 +217,6 @@ form {
     margin-bottom: 16px;
 }
 
-// input {
-//     height: 45px;
-// }
-
-
 .btnSend {
     background-color: #6453a6;
     border-color: transparent;
@@ -233,7 +237,6 @@ form {
     visibility: visible !important;
 
 }
-
 
 .menu {
     margin-bottom: 1.5rem;
@@ -265,10 +268,10 @@ form {
 
 
 
-// ------------ End Menu ------------ //
+// ------------ [-End Menu-] ------------ //
 
 
-// ------------ Footer ------------ //
+// ------------ [-Footer-] ------------ //
 .footer {
     color: #f2f2f2;
     width: 100%;
@@ -277,20 +280,72 @@ form {
     text-align: center;
 }
 
-// ------------ End Footer ------------ //
+// ------------ [-End Footer-] ------------ //
 
-// ------------------------------ Media ------------------------------ //
+// ------------------------------ [-Media Query-] ------------------------------ //
 
 @media only screen and(min-width:1000px) and (max-width: 1024px) {
     .navbar-collapse {
         position: relative;
-        left: 14%;
+        left: 10%;
     }
 
     .form-inline {
         display: none;
     }
 
+    .stickyIcons {
+        position: sticky !important;
+        top: 60% !important;
+        bottom: 0% !important;
+        z-index: 1 !important;
+
+        .whatsapp {
+            position: sticky !important;
+            top: 90% !important;
+            display: unset !important;
+
+            img {
+                width: 60px !important;
+                height: auto !important;
+
+                &:active {
+                    transition: all 0.2s ease-in-out;
+                    transform: scale(1.1);
+                    animation: rotation 0.3s;
+                }
+            }
+        }
+
+        .call {
+            display: unset !important;
+            position: sticky !important;
+            top: 90% !important;
+            left: 100% !important;
+            right: 0px;
+            z-index: 1 !important;
+
+            img {
+                width: 60px !important;
+                height: auto !important;
+
+                &:active {
+                    transition: all 0.2s ease-in-out !important;
+                    transform: scale(1.1) !important;
+                    animation: rotation 0.3s;
+                }
+            }
+        }
+    }
+    @keyframes rotation {
+        0% {
+            transform: rotate(0deg);
+        }
+
+        100% {
+            transform: rotate(360deg);
+        }
+    }
 }
 
 @media only screen and(min-width:200px) and (max-width: 999px) {
@@ -299,10 +354,66 @@ form {
         top: 0;
         left: 6%;
     }
+
     .titleContact {
         font-size: 1.5em !important;
     }
 
+    .stickyIcons {
+        position: sticky !important;
+        top: 80% !important;
+        bottom: 0% !important;
+        z-index: 1 !important;
+
+        .whatsapp {
+            position: sticky !important;
+            top: 90% !important;
+            display: unset !important;
+
+            img {
+                width: 60px !important;
+                height: auto !important;
+
+                &:active {
+                    transition: all 0.2s ease-in-out;
+                    transform: scale(1.1);
+                    animation: rotation 0.3s;
+                }
+            }
+        }
+
+        .call {
+
+            display: unset !important;
+            position: sticky !important;
+            top: 90% !important;
+            left: 100% !important;
+            right: 0px;
+            z-index: 1 !important;
+
+            img {
+                width: 60px !important;
+                height: auto !important;
+
+                &:active {
+                    transition: all 0.2s ease-in-out !important;
+                    transform: scale(1.1) !important;
+                    animation: rotation 0.3s;
+                }
+            }
+        }
+    }
+
+    @keyframes rotation {
+        0% {
+            transform: rotate(0deg);
+        }
+
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+
 }
 
-// ------------------------------ End Media ------------------------------ //
+// ------------------------------ [-End Media Query-] ------------------------------ //

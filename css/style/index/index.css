@@ -262,8 +262,8 @@ body::-webkit-scrollbar-thumb:hover {
 @-webkit-keyframes title {
   0% {
     opacity: 0;
-    -webkit-transform: translate3d(0, 100%, 0);
-            transform: translate3d(0, 100%, 0);
+    -webkit-transform: translate3d(10%, 0, 0);
+            transform: translate3d(10%, 0, 0);
   }
   100% {
     opacity: 1;
@@ -275,8 +275,8 @@ body::-webkit-scrollbar-thumb:hover {
 @keyframes title {
   0% {
     opacity: 0;
-    -webkit-transform: translate3d(0, 100%, 0);
-            transform: translate3d(0, 100%, 0);
+    -webkit-transform: translate3d(10%, 0, 0);
+            transform: translate3d(10%, 0, 0);
   }
   100% {
     opacity: 1;
@@ -489,6 +489,10 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 @media (min-width: 1000px) and (max-width: 1024px) {
+  .navbar-collapse {
+    position: relative;
+    left: 10%;
+  }
   .form-inline {
     display: none;
   }
@@ -544,6 +548,26 @@ body::-webkit-scrollbar-thumb:hover {
     -webkit-animation: rotation 0.3s;
             animation: rotation 0.3s;
   }
+  @-webkit-keyframes rotation {
+    0% {
+      -webkit-transform: rotate(0deg);
+              transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(360deg);
+              transform: rotate(360deg);
+    }
+  }
+  @keyframes rotation {
+    0% {
+      -webkit-transform: rotate(0deg);
+              transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(360deg);
+              transform: rotate(360deg);
+    }
+  }
 }
 
 @media (min-width: 200px) and (max-width: 999px) {
@@ -584,26 +608,6 @@ body::-webkit-scrollbar-thumb:hover {
   }
   .sliderPng5 {
     height: 400px;
-  }
-  @-webkit-keyframes rotation {
-    0% {
-      -webkit-transform: rotate(0deg);
-              transform: rotate(0deg);
-    }
-    100% {
-      -webkit-transform: rotate(360deg);
-              transform: rotate(360deg);
-    }
-  }
-  @keyframes rotation {
-    0% {
-      -webkit-transform: rotate(0deg);
-              transform: rotate(0deg);
-    }
-    100% {
-      -webkit-transform: rotate(360deg);
-              transform: rotate(360deg);
-    }
   }
   .stickyIcons {
     position: -webkit-sticky !important;
@@ -651,6 +655,26 @@ body::-webkit-scrollbar-thumb:hover {
     -webkit-animation: rotation 0.3s;
             animation: rotation 0.3s;
   }
+  @-webkit-keyframes rotation {
+    0% {
+      -webkit-transform: rotate(0deg);
+              transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(360deg);
+              transform: rotate(360deg);
+    }
+  }
+  @keyframes rotation {
+    0% {
+      -webkit-transform: rotate(0deg);
+              transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(360deg);
+              transform: rotate(360deg);
+    }
+  }
   .winnersElement {
     z-index: 3;
     position: relative;
@@ -684,23 +708,11 @@ body::-webkit-scrollbar-thumb:hover {
     text-decoration: none;
   }
   .winnersElement a:active {
-    background-color: blueviolet;
     opacity: 0.7;
     -webkit-transition: all ease-in-out 0.4s;
     transition: all ease-in-out 0.4s;
     -webkit-transform: scale(1.1) !important;
             transform: scale(1.1) !important;
-  }
-  .winnersElement a #outter {
-    font-size: 1em;
-    position: absolute;
-    margin: .23em;
-    width: 10.64em;
-    height: 10.64em;
-    border-radius: 50%;
-    background: #59258e url(https://www.mardigrasneworleans.com/templates/client/imagesNew/xcolorwheel.png.pagespeed.ic.67t0nvuILD.png) no-repeat center;
-    -webkit-transition: .6s;
-    transition: .6s;
   }
   .winnersElement a .inner {
     position: relative;
@@ -733,13 +745,6 @@ body::-webkit-scrollbar-thumb:hover {
     color: #3f940c;
     font-size: 2.5em;
     line-height: 1em;
-  }
-  .winnersElement a:hover #star {
-    opacity: 1;
-  }
-  .winnersElement a:hover #outter {
-    -webkit-box-shadow: 0 0 17px white, 0 0 30px white, 0 0 70px white, 0 0 160px white;
-            box-shadow: 0 0 17px white, 0 0 30px white, 0 0 70px white, 0 0 160px white;
   }
 }
 /*# sourceMappingURL=index.css.map */

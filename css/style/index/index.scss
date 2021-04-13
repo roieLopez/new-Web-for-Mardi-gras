@@ -4,15 +4,12 @@ body {
 }
 
 .hideAllPage {
-    // visibility:hidden;
-    display: none ;
-    // visibility: hidden;
+    display: none;
 }
-
 
 .stickyIcons {
     .whatsapp {
-        display:none;
+        display: none;
     }
 
     .call {
@@ -20,7 +17,7 @@ body {
     }
 }
 
-// ---------------------- loader Settings ---------------------- //
+// ---------------------- [-loader Settings-] ---------------------- //
 
 #preloader {
     position: fixed;
@@ -29,6 +26,7 @@ body {
     min-width: 100%;
     height: 100%;
 }
+
 #loader {
     display: block;
     position: relative;
@@ -43,6 +41,7 @@ body {
     -webkit-animation: spin 2s linear infinite;
     animation: spin 2s linear infinite;
 }
+
 #loader:before {
     content: "";
     position: absolute;
@@ -56,6 +55,7 @@ body {
     -webkit-animation: spin 3s linear infinite;
     animation: spin 3s linear infinite;
 }
+
 #loader:after {
     content: "";
     position: absolute;
@@ -69,24 +69,28 @@ body {
     -webkit-animation: spin 1.5s linear infinite;
     animation: spin 1.5s linear infinite;
 }
+
 @-webkit-keyframes spin {
-    0%   {
+    0% {
         -webkit-transform: rotate(0deg);
         -ms-transform: rotate(0deg);
         transform: rotate(0deg);
     }
+
     100% {
         -webkit-transform: rotate(360deg);
         -ms-transform: rotate(360deg);
         transform: rotate(360deg);
     }
 }
+
 @keyframes spin {
-    0%   {
+    0% {
         -webkit-transform: rotate(0deg);
         -ms-transform: rotate(0deg);
         transform: rotate(0deg);
     }
+
     100% {
         -webkit-transform: rotate(360deg);
         -ms-transform: rotate(360deg);
@@ -95,9 +99,9 @@ body {
 }
 
 
-// ---------------------- End loader Settings ---------------------- //
+// ---------------------- [-End loader Settings-] ---------------------- //
 
-// ---------------------- Scroll Body Settings ---------------------- //
+// ---------------------- [-Scroll Body Settings-] ---------------------- //
 
 body::-webkit-scrollbar {
     width: 1.1em;
@@ -116,9 +120,9 @@ body::-webkit-scrollbar-thumb {
     }
 }
 
-// ---------------------- End Scroll Body Settings ---------------------- //
+// ---------------------- [-End Scroll Body Settings-] ---------------------- //
 
-// ---------------------- Nav Bar ---------------------- //
+// ---------------------- [-Nav Bar-] ---------------------- //
 
 .navbar-toggler-icon {
     &:active {
@@ -186,9 +190,9 @@ body::-webkit-scrollbar-thumb {
     width: 255px;
 }
 
-// ---------------------- End Nav Bar ---------------------- //
+// ---------------------- [-End Nav Bar-] ---------------------- //
 
-// ---------------------- Slider ---------------------- //
+// ---------------------- [-Slider-] ---------------------- //
 .nav-item {
     margin-left: 25px !important;
 }
@@ -251,11 +255,11 @@ body::-webkit-scrollbar-thumb {
     background-size: cover;
 }
 
-// ---------------------- End Slider ---------------------- //
+// ---------------------- [-End Slider-] ---------------------- //
 
 
 
-// ------------ Menu ------------ //
+// ------------ [-Menu-] ------------ //
 
 
 .title {
@@ -270,7 +274,7 @@ body::-webkit-scrollbar-thumb {
 @keyframes title {
     0% {
         opacity: 0;
-        transform: translate3d(0, 100%, 0)
+        transform: translate3d(10%, 0, 0)
     }
 
     100% {
@@ -319,26 +323,13 @@ body::-webkit-scrollbar-thumb {
     }
 }
 
-// .containerMenu {
-//     .row {
-//         animation-name: fadeInUp;
-//         animation-duration: 2s;
-//         animation-delay: 0.1s;
-//         animation-timing-function: ease;
-//         visibility: visible !important;
-//     }
-// }
-
-
-    .animationMenu {
-        animation-name: fadeInUp;
-        animation-duration: 2s;
-        animation-delay: 0.1s;
-        animation-timing-function: ease;
-        visibility: visible !important;
-    }
-
-
+.animationMenu {
+    animation-name: fadeInUp;
+    animation-duration: 2s;
+    animation-delay: 0.1s;
+    animation-timing-function: ease;
+    visibility: visible !important;
+}
 
 @keyframes fadeInUp {
     0% {
@@ -351,7 +342,6 @@ body::-webkit-scrollbar-thumb {
         transform: none;
     }
 }
-
 
 .bgFunders1 {
     img {
@@ -399,18 +389,16 @@ body::-webkit-scrollbar-thumb {
     }
 }
 
-// ---------- winnersElement Show in Only 200px - 999px screen ---------- // 
+// ---------- [-winnersElement Show in Only 200px - 999px screen-] ---------- // 
 .winnersElement {
     display: none;
 }
 
-// ----------  End winnersElement ---------- // 
+// ----------  [-End winnersElement-] ---------- // 
 
-// ------------ End Menu ------------ //
+// ------------ [-End Menu-] ------------ //
 
-
-
-// ------------------------ Footer ------------------------ //
+// ------------------------ [-Footer-] ------------------------ //
 .footer {
     color: #f2f2f2;
     width: 100%;
@@ -418,15 +406,13 @@ body::-webkit-scrollbar-thumb {
     background-color: #323233;
 }
 
-// ------------------------ End Footer ------------------------ //
+// ------------------------ [-End Footer-] ------------------------ //
 
 
-// ------------------------------------------ Media ------------------------------------------ //
+// ------------------------------------------ [-Media Query-] ------------------------------------------ //
 
 @media (min-width:1600px) and (max-width: 2129px) {
     .containerIframe {
-        // position: absolute;
-        // right: 0;
 
         iframe {
             height: 153vh;
@@ -477,6 +463,11 @@ body::-webkit-scrollbar-thumb {
 }
 
 @media (min-width:1000px) and (max-width: 1024px) {
+    .navbar-collapse {
+        position: relative;
+        left: 10%;
+    }
+
     .form-inline {
         display: none;
     }
@@ -517,7 +508,6 @@ body::-webkit-scrollbar-thumb {
         }
 
         .call {
-
             display: unset !important;
             position: sticky !important;
             top: 90% !important;
@@ -537,6 +527,17 @@ body::-webkit-scrollbar-thumb {
             }
         }
     }
+
+    @keyframes rotation {
+        0% {
+            transform: rotate(0deg);
+        }
+
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+
 }
 
 @media (min-width:200px) and (max-width: 999px) {
@@ -545,6 +546,7 @@ body::-webkit-scrollbar-thumb {
         top: 0;
         left: 6%;
     }
+
     .fontSizeMenu {
         font-size: 12px;
         font-weight: 400;
@@ -593,16 +595,6 @@ body::-webkit-scrollbar-thumb {
         height: 400px;
     }
 
-    @keyframes rotation {
-        0% {
-            transform: rotate(0deg);
-        }
-
-        100% {
-            transform: rotate(360deg);
-        }
-    }
-
 
     .stickyIcons {
         position: sticky !important;
@@ -649,6 +641,16 @@ body::-webkit-scrollbar-thumb {
         }
     }
 
+    @keyframes rotation {
+        0% {
+            transform: rotate(0deg);
+        }
+
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+
     .winnersElement {
         z-index: 3;
         position: relative;
@@ -668,61 +670,31 @@ body::-webkit-scrollbar-thumb {
             transition: all 0.1s ease-in-out !important;
             animation: rotation 0.3s;
         }
-
-    }
-
-
-
-
-    .winnersElement a {
-        position: relative;
-        top: 261px;
-        width: 11.1em;
-        height: 11.1em;
-        display: inline-block;
-        border-radius: 50%;
-        background: rgba(255, 255, 255, .59);
-        text-decoration: none;
-
-        &:active {
-            background-color: blueviolet;
-            opacity: 0.7;
-            transition: all ease-in-out 0.4s;
-            transform: scale(1.1) !important;
-        }
-    }
-
-
-
-
-    .winnersElement a #outter {
-        font-size: 1em;
-        position: absolute;
-        margin: .23em;
-        width: 10.64em;
-        height: 10.64em;
-        border-radius: 50%;
-        background: #59258e url(https://www.mardigrasneworleans.com/templates/client/imagesNew/xcolorwheel.png.pagespeed.ic.67t0nvuILD.png) no-repeat center;
-        transition: .6s
-    }
-
-    .winnersElement a .inner {
-        position: relative;
-        width: 10em;
-        height: 10em;
-        margin: .54em;
-        border-radius: 50%;
-        text-align: center;
-        background: #fff url(../../../img/element2.png) center;
-        box-shadow: 1px 1px 8px rgba(0, 0, 0, .48);
-        transform: rotate(-18deg);
-    }
-
-
-
-    .winnersElement {
         a {
+            position: relative;
+            top: 261px;
+            width: 11.1em;
+            height: 11.1em;
+            display: inline-block;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, .59);
+            text-decoration: none;
+    
+            &:active {
+                opacity: 0.7;
+                transition: all ease-in-out 0.4s;
+                transform: scale(1.1) !important;
+            }
             .inner {
+                position: relative;
+                width: 10em;
+                height: 10em;
+                margin: .54em;
+                border-radius: 50%;
+                text-align: center;
+                background: #fff url(../../../img/element2.png) center;
+                box-shadow: 1px 1px 8px rgba(0, 0, 0, .48);
+                transform: rotate(-18deg);
                 span {
                     display: block;
                     font-family: 'Henny Penny', cursive;
@@ -731,7 +703,6 @@ body::-webkit-scrollbar-thumb {
                     text-shadow: 1px 1px 5px rgba(0, 0, 0, .32);
                     text-decoration: none;
                     opacity: 0.5;
-
                 }
 
                 :nth-child(1) {
@@ -747,18 +718,8 @@ body::-webkit-scrollbar-thumb {
                 }
             }
         }
-
     }
 
-
-
-    .winnersElement a:hover #star {
-        opacity: 1
-    }
-
-    .winnersElement a:hover #outter {
-        box-shadow: 0 0 17px white, 0 0 30px white, 0 0 70px white, 0 0 160px white
-    }
 }
 
-// ------------------------------ End Media ------------------------------ //
+// ------------------------------ [-End Media Query-] ------------------------------ //

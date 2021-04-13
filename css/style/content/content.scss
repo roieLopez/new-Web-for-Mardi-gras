@@ -1,8 +1,10 @@
 body {
     background-color: #f2f2f2;
-
 }
 
+.hideAllPage {
+    display: none;
+}
 
 .stickyIcons {
     .whatsapp {
@@ -14,7 +16,7 @@ body {
     }
 }
 
-// ---------------------- loader Settings ---------------------- //
+// ---------------------- [-loader Settings-] ---------------------- //
 
 #preloader {
     position: fixed;
@@ -23,6 +25,7 @@ body {
     min-width: 100%;
     height: 100%;
 }
+
 #loader {
     display: block;
     position: relative;
@@ -37,6 +40,7 @@ body {
     -webkit-animation: spin 2s linear infinite;
     animation: spin 2s linear infinite;
 }
+
 #loader:before {
     content: "";
     position: absolute;
@@ -50,6 +54,7 @@ body {
     -webkit-animation: spin 3s linear infinite;
     animation: spin 3s linear infinite;
 }
+
 #loader:after {
     content: "";
     position: absolute;
@@ -63,24 +68,28 @@ body {
     -webkit-animation: spin 1.5s linear infinite;
     animation: spin 1.5s linear infinite;
 }
+
 @-webkit-keyframes spin {
-    0%   {
+    0% {
         -webkit-transform: rotate(0deg);
         -ms-transform: rotate(0deg);
         transform: rotate(0deg);
     }
+
     100% {
         -webkit-transform: rotate(360deg);
         -ms-transform: rotate(360deg);
         transform: rotate(360deg);
     }
 }
+
 @keyframes spin {
-    0%   {
+    0% {
         -webkit-transform: rotate(0deg);
         -ms-transform: rotate(0deg);
         transform: rotate(0deg);
     }
+
     100% {
         -webkit-transform: rotate(360deg);
         -ms-transform: rotate(360deg);
@@ -89,9 +98,9 @@ body {
 }
 
 
-// ---------------------- End loader Settings ---------------------- //
+// ---------------------- [-End loader Settings-] ---------------------- //
 
-// ---------------------- Scroll Body Settings ---------------------- //
+// ---------------------- [-Scroll Body Settings-] ---------------------- //
 
 body::-webkit-scrollbar {
     width: 1.1em;
@@ -102,7 +111,6 @@ body::-webkit-scrollbar-track {
 }
 
 body::-webkit-scrollbar-thumb {
-    // background-color: rgba(169, 169, 169, 0.604);
     background-color: #6453a6;
     border-radius: 30px;
 
@@ -111,10 +119,10 @@ body::-webkit-scrollbar-thumb {
     }
 }
 
-// ---------------------- End Scroll Body Settings ---------------------- //
+// ---------------------- [-End Scroll Body Settings-] ---------------------- //
 
-// ---------------------- Nav Bar ---------------------- //
-.navbar-nav{
+// ---------------------- [-Nav Bar-] ---------------------- //
+.navbar-nav {
     margin-left: 23px;
 }
 
@@ -184,44 +192,47 @@ body::-webkit-scrollbar-thumb {
     width: 255px;
 }
 
-// ---------------------- End Nav Bar ---------------------- //
+// ---------------------- [-End Nav Bar-] ---------------------- //
 
 
-// ------------ Menu ------------ //
+// ------------ [-Menu-] ------------ //
 
 
-.containerQuestion{
+.containerQuestion {
     width: 500px !important;
     cursor: pointer;
     background-color: #6453a6;
     color: white;
     border-radius: 15px;
-    .question{
+
+    .question {
         line-height: 40px;
         border-bottom: 1px solid white;
         border-radius: 8px;
     }
-    .Answer{
+
+    .answer {
         text-align: left !important;
         padding: 15px;
-        color: #f2cc0f;  
-        // color: black;
+        color: #f2cc0f;
         border-bottom: 1px solid white;
-    div{
-        min-height: 20% !important;
-        // background-color: red;
-    }
-    h3{
-        font-weight: 600 !important;
-        background-color: #6453a6;
-        border: none !important;
-        color: #f2cc0f !important;
-        text-align: center;
-        &:active{
-            color:white;
-            border: none !important;
+
+        div {
+            min-height: 20% !important;
         }
-    }
+
+        h3 {
+            font-weight: 600 !important;
+            background-color: #6453a6;
+            border: none !important;
+            color: #f2cc0f !important;
+            text-align: center;
+
+            &:active {
+                color: white;
+                border: none !important;
+            }
+        }
 
     }
 }
@@ -239,7 +250,6 @@ body::-webkit-scrollbar-thumb {
     animation-delay: 0.1s;
     animation-timing-function: ease;
     visibility: visible !important;
-
 }
 
 .menu {
@@ -270,10 +280,10 @@ body::-webkit-scrollbar-thumb {
     }
 }
 
-// ------------ End Menu ------------ //
+// ------------ [-End Menu-] ------------ //
 
 
-// ------------ Footer ------------ //
+// ------------ [-Footer-] ------------ //
 .footer {
     color: #f2f2f2;
     width: 100%;
@@ -282,18 +292,72 @@ body::-webkit-scrollbar-thumb {
     text-align: center;
 }
 
-// ------------ End Footer ------------ //
+// ------------ [-End Footer-] ------------ //
 
-// ------------------------------ Media ------------------------------ //
+// ------------------------------ [-Media Query-] ------------------------------ //
 
 @media only screen and(min-width:1000px) and (max-width: 1024px) {
     .navbar-collapse {
         position: relative;
-        left: 14%;
+        left: 10%;
     }
 
     .form-inline {
         display: none;
+    }
+
+    .stickyIcons {
+        position: sticky !important;
+        top: 55% !important;
+        bottom: 0% !important;
+        z-index: 1 !important;
+
+        .whatsapp {
+            position: sticky !important;
+            top: 90% !important;
+            display: unset !important;
+
+            img {
+                width: 60px !important;
+                height: auto !important;
+
+                &:active {
+                    transition: all 0.2s ease-in-out;
+                    transform: scale(1.1);
+                    animation: rotation 0.3s;
+                }
+            }
+        }
+
+        .call {
+            display: unset !important;
+            position: sticky !important;
+            top: 90% !important;
+            left: 100% !important;
+            right: 0px;
+            z-index: 1 !important;
+
+            img {
+                width: 60px !important;
+                height: auto !important;
+
+                &:active {
+                    transition: all 0.2s ease-in-out !important;
+                    transform: scale(1.1) !important;
+                    animation: rotation 0.3s;
+                }
+            }
+        }
+    }
+
+    @keyframes rotation {
+        0% {
+            transform: rotate(0deg);
+        }
+
+        100% {
+            transform: rotate(360deg);
+        }
     }
 
 }
@@ -304,116 +368,72 @@ body::-webkit-scrollbar-thumb {
         top: 0;
         left: 6%;
     }
+
     .titleContent {
         font-size: 1.5em !important;
     }
-    .container{
+
+    .container {
         width: 100% !important;
     }
-    
-    .hide{
+
+    .hide {
         display: none;
     }
 
+    .stickyIcons {
+        position: sticky !important;
+        top: 80% !important;
+        bottom: 0% !important;
+        z-index: 1 !important;
+
+        .whatsapp {
+            position: sticky !important;
+            top: 90% !important;
+            display: unset !important;
+
+            img {
+                width: 60px !important;
+                height: auto !important;
+
+                &:active {
+                    transition: all 0.2s ease-in-out;
+                    transform: scale(1.1);
+                    animation: rotation 0.3s;
+                }
+            }
+        }
+
+        .call {
+            display: unset !important;
+            position: sticky !important;
+            top: 90% !important;
+            left: 100% !important;
+            right: 0px;
+            z-index: 1 !important;
+
+            img {
+                width: 60px !important;
+                height: auto !important;
+
+                &:active {
+                    transition: all 0.2s ease-in-out !important;
+                    transform: scale(1.1) !important;
+                    animation: rotation 0.3s;
+                }
+            }
+        }
+    }
+
+    @keyframes rotation {
+        0% {
+            transform: rotate(0deg);
+        }
+
+        100% {
+            transform: rotate(360deg);
+        }
+    }
 }
 
-// ------------------------------ End Media ------------------------------ //
-
-
-
-
-ul, li {
-    list-style: none;
-}
-
-// #container {
-//     width: 60%;
-//     margin: 0 20%;
-//     overflow: auto;
-// }
-
-.faq{
-    text-align: left !important;
-}
-
-h1 {
-    text-align: center;
-    margin: 1em 0;
-}
-
-
-.faq li {
-    padding: 1em;
-    border-radius: 30px;
-}
-
-.faq li.q {
-    font-weight: bold;
-    // font-size: 120%;
-    border-bottom: 1px #ccc solid;
-    cursor: pointer;
-    color: #f2cc0f;
-    background-color:#6453a6;
-}
-
-// .faq li.q:nth-child(1),
-// .faq li.q:nth-child(5),
-// .faq li.q:nth-child(9) {
-//     background-color:#6453a6;
-// }
-
-.faq li.a {
-    font-weight: bold;
-    // color: #6bba70;
-    background: #fff;
-    display: none;
-}
-
-// img {
-//     margin-right: .5em;
-// }
-
-// footer {
-//     height: 6em;
-//     padding: 2em;
-//     margin-top: 2em;
-// }
-
-// footer h3 {
-//     width: 50%;
-//     margin: 0 25%;
-// }
-
-// footer a {
-//     color: #6bba30;
-//     text-decoration: none;
-// }
-
-/********* MEDIA QUERIES ************/
-// @media (max-width: 800px) {
-//     #container {
-//         width: 90%;
-//         margin: 0 5%;
-//     }
-    
-//     .title {
-//         width: 90%;
-//         margin: 0 5%;
-//         height: 3.5em;
-//     }
-    
-//     .faq li {
-//         text-align: center;
-//     }
-    
-//     .faq li.a {
-//         width: 85%;
-//         margin-left: 5%;
-//     }
-    
-//     footer h3 {
-//         width: 90%;
-//         margin: 0 5%;
-//         text-align: center;
-//     }
-// }
+// ------------------------------ [-End Media Query-] ------------------------------ //

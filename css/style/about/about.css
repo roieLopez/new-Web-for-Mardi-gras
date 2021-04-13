@@ -2,6 +2,10 @@ body {
   background-color: #f2f2f2;
 }
 
+.hideAllPage {
+  display: none;
+}
+
 .stickyIcons .whatsapp {
   display: none;
 }
@@ -349,7 +353,7 @@ body::-webkit-scrollbar-thumb:hover {
 @media only screen and (min-width: 1000px) and (max-width: 1024px) {
   .navbar-collapse {
     position: relative;
-    left: 14%;
+    left: 10%;
   }
   .form-inline {
     display: none;
@@ -367,6 +371,72 @@ body::-webkit-scrollbar-thumb:hover {
   }
   .aboutImg2 {
     margin-top: 40% !important;
+  }
+  .stickyIcons {
+    position: -webkit-sticky !important;
+    position: sticky !important;
+    top: 90% !important;
+    bottom: 0% !important;
+    z-index: 1 !important;
+  }
+  .stickyIcons .whatsapp {
+    position: -webkit-sticky !important;
+    position: sticky !important;
+    top: 90% !important;
+    display: unset !important;
+  }
+  .stickyIcons .whatsapp img {
+    width: 60px !important;
+    height: auto !important;
+  }
+  .stickyIcons .whatsapp img:active {
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+    -webkit-animation: rotation 0.3s;
+            animation: rotation 0.3s;
+  }
+  .stickyIcons .call {
+    display: unset !important;
+    position: -webkit-sticky !important;
+    position: sticky !important;
+    top: 90% !important;
+    left: 100% !important;
+    right: 0px;
+    z-index: 1 !important;
+  }
+  .stickyIcons .call img {
+    width: 60px !important;
+    height: auto !important;
+  }
+  .stickyIcons .call img:active {
+    -webkit-transition: all 0.2s ease-in-out !important;
+    transition: all 0.2s ease-in-out !important;
+    -webkit-transform: scale(1.1) !important;
+            transform: scale(1.1) !important;
+    -webkit-animation: rotation 0.3s;
+            animation: rotation 0.3s;
+  }
+  @-webkit-keyframes rotation {
+    0% {
+      -webkit-transform: rotate(0deg);
+              transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(360deg);
+              transform: rotate(360deg);
+    }
+  }
+  @keyframes rotation {
+    0% {
+      -webkit-transform: rotate(0deg);
+              transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(360deg);
+              transform: rotate(360deg);
+    }
   }
 }
 
@@ -396,6 +466,72 @@ body::-webkit-scrollbar-thumb:hover {
   }
   .hide {
     display: none;
+  }
+  .stickyIcons {
+    position: -webkit-sticky !important;
+    position: sticky !important;
+    top: 80% !important;
+    bottom: 0% !important;
+    z-index: 1 !important;
+  }
+  .stickyIcons .whatsapp {
+    position: -webkit-sticky !important;
+    position: sticky !important;
+    top: 90% !important;
+    display: unset !important;
+  }
+  .stickyIcons .whatsapp img {
+    width: 60px !important;
+    height: auto !important;
+  }
+  .stickyIcons .whatsapp img:active {
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+    -webkit-animation: rotation 0.3s;
+            animation: rotation 0.3s;
+  }
+  .stickyIcons .call {
+    display: unset !important;
+    position: -webkit-sticky !important;
+    position: sticky !important;
+    top: 90% !important;
+    left: 100% !important;
+    right: 0px;
+    z-index: 1 !important;
+  }
+  .stickyIcons .call img {
+    width: 60px !important;
+    height: auto !important;
+  }
+  .stickyIcons .call img:active {
+    -webkit-transition: all 0.2s ease-in-out !important;
+    transition: all 0.2s ease-in-out !important;
+    -webkit-transform: scale(1.1) !important;
+            transform: scale(1.1) !important;
+    -webkit-animation: rotation 0.3s;
+            animation: rotation 0.3s;
+  }
+  @-webkit-keyframes rotation {
+    0% {
+      -webkit-transform: rotate(0deg);
+              transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(360deg);
+              transform: rotate(360deg);
+    }
+  }
+  @keyframes rotation {
+    0% {
+      -webkit-transform: rotate(0deg);
+              transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(360deg);
+              transform: rotate(360deg);
+    }
   }
 }
 /*# sourceMappingURL=about.css.map */
