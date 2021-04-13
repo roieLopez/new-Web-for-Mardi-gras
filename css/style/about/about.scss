@@ -196,7 +196,7 @@ body::-webkit-scrollbar-thumb {
 // ---------------------- [-End Nav Bar-] ---------------------- //
 
 // ------------ [-Menu-] ------------ //
-.containerRight {
+.ContainerAnimationAbout {
     animation-name: fadeRight;
     animation-duration: 2s;
     animation-delay: 0.1s;
@@ -459,6 +459,10 @@ body::-webkit-scrollbar-thumb {
 }
 
 @media only screen and(min-width:200px) and (max-width: 999px) {
+
+    .ContainerAnimationAbout{
+        animation:none;
+    }
 
     .animationMenuAbout {
         animation-name: fadeRight;

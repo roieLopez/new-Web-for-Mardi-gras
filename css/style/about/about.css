@@ -185,7 +185,7 @@ body::-webkit-scrollbar-thumb:hover {
   width: 255px;
 }
 
-.containerRight {
+.ContainerAnimationAbout {
   -webkit-animation-name: fadeRight;
           animation-name: fadeRight;
   -webkit-animation-duration: 2s;
@@ -441,6 +441,10 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 @media only screen and (min-width: 200px) and (max-width: 999px) {
+  .ContainerAnimationAbout {
+    -webkit-animation: none;
+            animation: none;
+  }
   .animationMenuAbout {
     -webkit-animation-name: fadeRight;
             animation-name: fadeRight;
