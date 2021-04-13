@@ -6,20 +6,17 @@ $(document).on('scroll', function() {
       $('.containerMenu').removeClass('animationMenu');
       $('.containerIframeRight').removeClass('animationIframeRight');
       $('.containerIframe').removeClass('animationIframeLeft');
-      $('.testRoie').removeClass('animationMenuAbout');
+      $('.animationMenuA').removeClass('animationMenuAbout');
       $('.video').removeClass('videoAnim');
-      
-      // $('#btt').addClass('display-none');
   } else {
       $('.titleWeOffer').addClass('title');
       $('.titleWeOffer').css("display","block");
       $('.containerMenu').addClass('animationMenu');
       $('.containerIframeRight').addClass('animationIframeRight');
       $('.containerIframe').addClass('animationIframeLeft');
-      $('.testRoie').addClass('animationMenuAbout');
+      $('.animationMenuA').addClass('animationMenuAbout');
       $('.video').addClass('videoAnim');
-      // $('#btt').removeClass('display-none');
   }
 });
 
-console.log($(document));
+// console.log($(document));
