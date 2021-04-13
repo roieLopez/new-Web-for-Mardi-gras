@@ -6,7 +6,7 @@ $(document).on('scroll', function() {
       $('.containerMenu').removeClass('animationMenu');
       $('.containerIframeRight').removeClass('animationIframeRight');
       $('.containerIframe').removeClass('animationIframeLeft');
-      $('.animationMenuA').removeClass('animationMenuAbout');
+      $('.animationAbout').removeClass('animationMenuAbout');
       $('.video').removeClass('videoAnim');
   } else {
       $('.titleWeOffer').addClass('title');
@@ -14,9 +14,8 @@ $(document).on('scroll', function() {
       $('.containerMenu').addClass('animationMenu');
       $('.containerIframeRight').addClass('animationIframeRight');
       $('.containerIframe').addClass('animationIframeLeft');
-      $('.animationMenuA').addClass('animationMenuAbout');
+      $('.animationAbout').addClass('animationMenuAbout');
       $('.video').addClass('videoAnim');
   }
 });
 
-// console.log($(document));
