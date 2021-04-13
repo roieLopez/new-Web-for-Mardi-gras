@@ -7,7 +7,7 @@ $(document).on('scroll', function () {
     $('.containerMenu').removeClass('animationMenu');
     $('.containerIframeRight').removeClass('animationIframeRight');
     $('.containerIframe').removeClass('animationIframeLeft');
-    $('.video').removeClass('videoAnim');
+    // $('.video').removeClass('videoAnim');
   } else {
     $('.titleWeOffer').addClass('title');
     $('.titleWeOffer').css("display", "block");
