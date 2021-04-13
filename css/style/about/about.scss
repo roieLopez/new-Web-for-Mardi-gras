@@ -196,7 +196,7 @@ body::-webkit-scrollbar-thumb {
 // ---------------------- [-End Nav Bar-] ---------------------- //
 
 // ------------ [-Menu-] ------------ //
-.ContainerAnimationAbout {
+.animationAbout {
     animation-name: fadeRight;
     animation-duration: 2s;
     animation-delay: 0.1s;
@@ -459,17 +459,28 @@ body::-webkit-scrollbar-thumb {
 }
 
 @media only screen and(min-width:200px) and (max-width: 999px) {
-
-    .ContainerAnimationAbout{
-        animation:none;
-    }
+.animationAbout{
+    animation: none;
+}
 
     .animationMenuAbout {
-        animation-name: fadeRight;
-        animation-duration: 3s;
+        animation-name: animationMenuAbout;
+        animation-duration: 2s;
         animation-delay: 0.1s;
         animation-timing-function:ease;
         visibility: visible !important;
+    }
+
+    @keyframes animationMenuAbout {
+        0% {
+            opacity: 0;
+            transform: translate3d(100%, 0, 0)
+        }
+    
+        100% {
+            opacity: 1;
+            transform: none
+        }
     }
 
 

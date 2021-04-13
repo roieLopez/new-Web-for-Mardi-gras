@@ -194,10 +194,8 @@ body::-webkit-scrollbar-thumb:hover {
           animation-name: videoAnim;
   -webkit-animation-duration: 2s;
           animation-duration: 2s;
-  -webkit-animation-delay: 0.1s;
-          animation-delay: 0.1s;
-  -webkit-animation-timing-function: steps(1, 2, 3);
-          animation-timing-function: steps(1, 2, 3);
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
   visibility: visible !important;
 }
 

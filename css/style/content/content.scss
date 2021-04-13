@@ -241,8 +241,25 @@ body::-webkit-scrollbar-thumb {
     font-size: 3em !important;
     font-family: 'Henny Penny', cursive !important;
     color: #8cbf3f;
+
+    animation-name: titleContentAnimation;
+    animation-duration: 2s;
+    animation-delay: 0.1s;
+    animation-timing-function: ease;
+    visibility: visible !important;
 }
 
+@keyframes titleContentAnimation {
+    0% {
+        opacity: 0;
+        transform: translate3d(100%, 0, 0)
+    }
+
+    100% {
+        opacity: 1;
+        transform: none
+    }
+}
 
 .accordion {
     animation-name: fadeRight;

@@ -185,7 +185,7 @@ body::-webkit-scrollbar-thumb:hover {
   width: 255px;
 }
 
-.ContainerAnimationAbout {
+.animationAbout {
   -webkit-animation-name: fadeRight;
           animation-name: fadeRight;
   -webkit-animation-duration: 2s;
@@ -441,20 +441,44 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 @media only screen and (min-width: 200px) and (max-width: 999px) {
-  .ContainerAnimationAbout {
+  .animationAbout {
     -webkit-animation: none;
             animation: none;
   }
   .animationMenuAbout {
-    -webkit-animation-name: fadeRight;
-            animation-name: fadeRight;
-    -webkit-animation-duration: 3s;
-            animation-duration: 3s;
+    -webkit-animation-name: animationMenuAbout;
+            animation-name: animationMenuAbout;
+    -webkit-animation-duration: 2s;
+            animation-duration: 2s;
     -webkit-animation-delay: 0.1s;
             animation-delay: 0.1s;
     -webkit-animation-timing-function: ease;
             animation-timing-function: ease;
     visibility: visible !important;
+  }
+  @-webkit-keyframes animationMenuAbout {
+    0% {
+      opacity: 0;
+      -webkit-transform: translate3d(100%, 0, 0);
+              transform: translate3d(100%, 0, 0);
+    }
+    100% {
+      opacity: 1;
+      -webkit-transform: none;
+              transform: none;
+    }
+  }
+  @keyframes animationMenuAbout {
+    0% {
+      opacity: 0;
+      -webkit-transform: translate3d(100%, 0, 0);
+              transform: translate3d(100%, 0, 0);
+    }
+    100% {
+      opacity: 1;
+      -webkit-transform: none;
+              transform: none;
+    }
   }
   #preloader {
     position: fixed;
