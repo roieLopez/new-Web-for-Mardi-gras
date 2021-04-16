@@ -197,6 +197,7 @@ body::-webkit-scrollbar-thumb:hover {
   -webkit-animation-delay: 0.2s;
           animation-delay: 0.2s;
   visibility: visible !important;
+  color: rgba(255, 0, 0, 0.563);
 }
 
 @-webkit-keyframes videoAnim {

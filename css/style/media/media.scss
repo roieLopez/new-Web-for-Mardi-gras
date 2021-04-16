@@ -208,6 +208,7 @@ body::-webkit-scrollbar-thumb {
     animation-delay: 0.2s;
     // animation-timing-function:steps(1,2,3);	
     visibility: visible !important;	
+    color: rgba(255, 0, 0, 0.563);
 }
 
 @keyframes videoAnim {

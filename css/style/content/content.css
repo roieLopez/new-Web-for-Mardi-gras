@@ -223,10 +223,47 @@ body::-webkit-scrollbar-thumb:hover {
   border: none !important;
 }
 
+.quizForm {
+  width: 500px !important;
+  cursor: pointer;
+  background-color: #8cbf3f;
+  color: white;
+  border-radius: 15px;
+}
+
+.quizForm .question {
+  line-height: 40px;
+  border-bottom: 1px solid white;
+  border-radius: 8px;
+}
+
+.quizForm .answer {
+  text-align: left !important;
+  padding: 15px;
+  color: rgba(0, 0, 0, 0.494);
+  border-bottom: 1px solid white;
+}
+
+.quizForm .answer div {
+  min-height: 20% !important;
+}
+
+.quizForm .answer h3 {
+  font-weight: 600 !important;
+  border: none !important;
+  color: white !important;
+  text-align: center;
+}
+
+.quizForm .answer h3:active {
+  color: white;
+  border: none !important;
+}
+
 .titleContent {
   font-size: 3em !important;
   font-family: 'Henny Penny', cursive !important;
-  color: #8cbf3f;
+  color: rgba(0, 0, 0, 0.597);
   -webkit-animation-name: titleContentAnimation;
           animation-name: titleContentAnimation;
   -webkit-animation-duration: 2s;
@@ -241,8 +278,8 @@ body::-webkit-scrollbar-thumb:hover {
 @-webkit-keyframes titleContentAnimation {
   0% {
     opacity: 0;
-    -webkit-transform: translate3d(100%, 0, 0);
-            transform: translate3d(100%, 0, 0);
+    -webkit-transform: translate3d(0, 50%, 0);
+            transform: translate3d(0, 50%, 0);
   }
   100% {
     opacity: 1;
@@ -254,8 +291,8 @@ body::-webkit-scrollbar-thumb:hover {
 @keyframes titleContentAnimation {
   0% {
     opacity: 0;
-    -webkit-transform: translate3d(100%, 0, 0);
-            transform: translate3d(100%, 0, 0);
+    -webkit-transform: translate3d(0, 50%, 0);
+            transform: translate3d(0, 50%, 0);
   }
   100% {
     opacity: 1;
