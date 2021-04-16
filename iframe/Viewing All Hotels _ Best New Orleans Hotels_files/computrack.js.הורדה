@@ -1,0 +1,282 @@
+window.domainmap = ["56b8081a","9d0d0b07","3b7d06a0","35d5064f","302a05ed","3d5b06be","2555053d","4a590774","44090715","ad3e0bb6","37c20670","243a051b","47c9076c","47e1076c","4e8107b6","43cd071d","574e081a","30ee0610","5dde0868","131e0393","3e4c06cc","7de209e9","1a040452","1fc004cd","200104d4","4f1407c9","468e074a","349e0626","28da056a","2ef505db","7da209f8","5dac0867","1f6804d0","7c8f09b8","d4c10ccb","12350363","5edb0887","67b408e7","5e43087b","b59e0be2","5ead0884","559f07fd","5ffe0896","635808d7","627e08c7","31170606","87c40a52","88320a5f","5869084b","92550aad","48190768","4e8607c0","7dc509ed","246e052a","72e30976","729c096f","3dc806c5","52ef07e1","3f9d06ed","2fee05ea","46e80761","31890614","31c8061a","72900969","25af054a","7d0309d4","85170a1d","13ad03a4","12120390","5583080b","dca30d30","73260977","73b10985","9f9b0b47","33fb0633","2a760599","94140a7f","569e082c","e8c20d8d","ab480b9f","b7f90c12","15d703e7","4c1c079a","69c10907","9ee60b22","05350e5a","60f808a1","25940542","25e8054e","5d700868","739f098f","43330714","3bb806aa","92460ab1","57e10834","3850067b","5910084c","560d0807","4f9e07c1","7ebf09ef","46eb0747","387c067b","93290abb","92710aad","7c6609e7","3f2506eb","7c8009c6","266d055d","2b3305a1","32880631","91460aa6","1178037a","529007d6","2a8f058c","11140367","37f00679","47050752","56110815","38140668","578a0822","25590537","60440895","55690803","49f90782","3f6d06ec","320d062c","72560966","5645081a","2ad505a4","572f0825","5704081f","47a20761","473e075a","4dda07a5","319d0618","7585098f","87250a45","3985069a","129d03a2","1c090427","1a7f045b","9e0a0b28","5f2b0883","28ea0565","938c0acb","b7110c06","94190ac9","57080816","3fa906ea","3fe306f1","73220964","616308b3","b6960bf4","47640757","4fdc07cd","610b08a4","ab2a0b96","898a0a68","c32e0c63","ee2b0dc8","734a0964","204d04d6","0af6029f","3ed806d8","2b3d05a7","59450849","3ee506d6","25990542","3e8f06d3","735f0973","6a26091e","305605f0","92720ab8","2a8f0593","463c0749","32150625","3bcc06a9","47e50761","72e60965","4ff107d3","614e08a0","615808a0","44d00724","4f2607c2","4f1e07c2","9c030aff","70ab0956","7ca109d7","5f96088b","a0580b45","6ee00953","47890756","73470967","277a0575","5664081f","2e8105bb","25b00546","384e0676","44ca071b","b78a0c10","3d8306a1","47330757","25d30540","58ad082f","38430671","5a490857","6b48091c","56a8081b","58800832","c7490c61","9ffb0b32","9ff60b39","4fcf07d3","39e5069c","2afe0591","74890981","57bd083b","6a520917","3811066f","733b0969","129c03a4","403006ee","26310550","596f0851","589f0842","3fb406f2","50c207db","6b45090f","5bcd084c","793c09af","7cec09d8","687d08e4","a9ef0b8d","4835076c"];
+(function (){
+	"use strict";
+
+	// Some polyfills
+	if (!Element.prototype.matches) {
+		Element.prototype.matches = Element.prototype.msMatchesSelector;
+	}
+
+	if (!Element.prototype.closest) {
+		Element.prototype.closest = function(s) {
+			let el = this;
+			let ancestor = this;
+			if (!document.documentElement.contains(el)) return null;
+			do {
+				if (ancestor.matches(s)) return ancestor;
+				ancestor = ancestor.parentElement;
+			} while (ancestor !== null);
+			return null;
+		};
+	}
+
+	// A simple hash function
+	String.prototype.adler32_hash = function() {
+		for (var i = 0, len = this.length, s1 = 1, s2 = 0; i < len; i++) {
+			s1 = (s1 + this.charCodeAt(i)) % 0xFFF1;
+			s2 = (s2 + s1) % 0xFFF1;
+		}
+		return ("00000000" + ((s2 << 16) + s1).toString(16)).substr(-8);
+	}
+
+	// Our tracker object
+	var Computrack = function(tracker, config) {
+		this.tracker = tracker;
+		this.config = config || {};
+		this.promo_data = null;
+		ga.create('UA-38106873-3', 'auto', 'computrack', { allowLinker:true });
+
+		ga.trackers = { // helper mapping to trigger all trackers
+			send:this.send.bind(this),
+			set:this.set.bind(this),
+			require:this.require.bind(this),
+			promo:this.promo.bind(this)
+		};
+
+		ga.trackers.set('transport', 'beacon');
+
+		if (this.config.clean_url) { // Remove the no-longer-needed URL parameters from URL bar and GA
+			var trimmed = this.querystring(window.location.href, 'remove', this.ga_query_params);
+			if (window.location.href != trimmed) {
+				if (history && history.replaceState) {
+					history.replaceState(history.state, '', trimmed);
+				} else {
+					// It's important that the GA has been created but the pageview hasn't been called yet!
+					window.location.href = trimmed;
+				}
+			}
+			ga.trackers.set('location', this.querystring(window.location.href, 'remove', this.extra_query_params));
+		}
+
+		if (this.config.ec !== undefined) { // 'products' or 'promotions'
+			ga.trackers.require('ec', 'ec.js');
+		}
+	}
+
+	Computrack.prototype.trackImpressions = function() {
+		if (this.config.ec == 'products' || this.config.ec == 'promotions') {
+
+			this.promo_data = {featured:[], notfeatured:[], potential_hundred_list:[] };
+
+			this.promo_data.featured = document.querySelectorAll('[data-ga-id][data-ga-featured]');
+			this.promo_data.notfeatured = document.querySelectorAll('[data-ga-id]:not([data-ga-featured])');
+			this.promo_data.potential_hundred_list = Array.prototype.reduce.call(this.promo_data.notfeatured, function(accum, current) {
+				if (accum.indexOf(current.getAttribute('data-ga-id')) === -1) {
+					accum.push(current.getAttribute('data-ga-id'));
+				}
+				return accum;
+			}, []);
+
+			let ret = [];
+			if (this.promo_data.featured.length) {
+				ret = ret.concat(Array.prototype.map.call(this.promo_data.featured, function(el) {
+					return this.buildECData(el, false);
+				}, this));
+			}
+			if (this.promo_data.notfeatured.length) {
+				ret = ret.concat(Array.prototype.map.call(this.promo_data.notfeatured, function(el) {
+					return this.buildECData(el, this.promo_data.potential_hundred_list.length == 1);
+				}, this));
+			}
+			if (ret.length) {
+				ga.trackers.promo('impression', ret);
+			}
+		}
+	}
+
+	Computrack.prototype.buildECData = function(el, position) {
+		return {
+			id: parseInt(el.getAttribute('data-ga-id')),
+			name: el.getAttribute('data-ga-name') || (el.querySelector('[data-ga-name]') ? (el.querySelector('[data-ga-name]').getAttribute('data-ga-name') || el.querySelector('[data-ga-name]').textContent.trim()) : ''),
+			position: position,
+			creative: el.getAttribute('data-ga-creative') || (el.hasAttribute('data-ga-featured') ? 'featured' : '')
+			// creative: el.getAttribute('data-ga-extra') || (el.querySelector('[data-ga-extra]') ? (el.querySelector('[data-ga-extra]').getAttribute('data-ga-extra') || el.querySelector('[data-ga-extra]').textContent.trim()) : '')
+		};
+	}
+
+	Computrack.prototype.ga_query_params = ['_ga', '_gac', 'utm_source', 'utm_medium', 'utm_term', 'utm_content', 'utm_campaign', 'fbclid'];
+	Computrack.prototype.extra_query_params = ['_ga', '_gac', 'utm_source', 'utm_medium', 'utm_term', 'utm_content', 'utm_campaign', 'fbclid', 'ModPagespeed', 'debug', 'admin'];
+
+	Computrack.prototype.autoLink = function() {
+		let add_link = function(e) {
+// debugger;
+// e.preventDefault();
+			let anchor = e.target.closest('a,area');
+			if (!anchor) return;
+			let samedomain = anchor.hostname == window.location.hostname;
+			if (this.config.ec == 'promotions') {
+				let gaobj = anchor.closest('[data-ga-id]');
+				if (gaobj) {
+					let isfeatured = gaobj.matches('[data-ga-featured]');
+					let matches_hundredsov_id = (this.promo_data.potential_hundred_list.length == 1) && (this.promo_data.potential_hundred_list[0] == gaobj.getAttribute('data-ga-id'));
+					let ecdata = this.buildECData(gaobj, !samedomain || (isfeatured && matches_hundredsov_id));
+					ga.trackers.promo('interaction', [ecdata]);
+				}
+			}
+			if (samedomain) return;
+
+			if (['http:', 'https:'].indexOf(anchor.protocol) != -1) { // regular link
+				anchor.search = this.querystring(anchor.search, 'replace', {
+					'utm_source': window.location.hostname.slice(0,4) == "www." ? window.location.hostname.slice(4) : window.location.hostname,
+					'utm_medium': 'referral'
+				});
+				let cascade_hash = anchor.hostname.split('.').map(function (val,idx,arr) { return arr.slice(idx).join('.').adler32_hash(); });
+				if (window.domainmap.reduce(function(last,dom) { return last || cascade_hash.indexOf(dom) != -1; }, false)) {
+					anchor.search = this.querystring(anchor.search, 'replace', { '_ga': this.tracker.get('linkerParam').substr(4) });
+				}
+				if (this.config.track_outbound_url) {
+					let category = anchor.getAttribute('data-ga-category') || 'engagement';
+					let action = anchor.getAttribute('data-ga-action') || 'outbound_link';
+					let label = anchor.getAttribute('data-ga-label') || this.querystring(anchor.href, 'remove', this.extra_query_params);
+					let value = anchor.getAttribute('data-ga-value') || 0;
+					ga.trackers.send('event', category, action, label, value);
+
+					if (anchor.target != '_blank') {
+						ga.trackers.send('exception', {exDescription: 'Outgoing Link in same window'});
+					}
+				}
+			} else if (['mailto:', 'tel:'].indexOf(anchor.protocol) != -1 && !anchor.hostname) { // mailto: or tel: link
+				let category = anchor.getAttribute('data-ga-category') || 'engagement';
+				let action = anchor.getAttribute('data-ga-action') || ((anchor.protocol == 'mailto:') ? 'email_link' : 'phone_link');
+				let label = anchor.getAttribute('data-ga-label') || anchor.pathname;
+				let value = anchor.getAttribute('data-ga-value') || 0;
+				ga.trackers.send('event', category, action, label, value);
+			}
+		}
+
+		let add_submission = function(e) {
+// debugger;
+// e.preventDefault();
+			let form = e.target.closest('form');
+			if (!form) return;
+			// let samedomain = (new URL(form.action)).hostname == window.location.hostname;
+			// if (this.config.ec == 'promotions') {
+			// 	let gaobj = anchor.closest('[data-ga-id]');
+			// 	if (gaobj) {
+			// 		let isfeatured = gaobj.matches('[data-ga-featured]');
+			// 		let matches_hundredsov_id = (this.promo_data.potential_hundred_list.length == 1) && (this.promo_data.potential_hundred_list[0] == gaobj.getAttribute('data-ga-id'));
+			// 		let ecdata = this.buildECData(gaobj, !samedomain || (isfeatured && matches_hundredsov_id));
+			// 		ga.trackers.promo('interaction', [ecdata]);
+			// 	}
+			// }
+			// if (samedomain) return;
+
+			// let cascade_hash = anchor.hostname.split('.').map(function (val,idx,arr) { return arr.slice(idx).join('.').adler32_hash(); });
+			// if (window.domainmap.reduce(function(last,dom) { return last || cascade_hash.indexOf(dom) != -1; }, false)) {
+			// 	anchor.search = this.querystring(anchor.search, 'replace', { '_ga': this.tracker.get('linkerParam').substr(4) });
+			// }
+			if (this.config.track_outbound_url) {
+				let category = form.getAttribute('data-ga-category') || 'engagement';
+				let action = form.getAttribute('data-ga-action') || 'form_submission';
+				let label = form.getAttribute('data-ga-label') || this.querystring(form.action, 'remove', this.extra_query_params);
+				let value = form.getAttribute('data-ga-value') || 0;
+				ga.trackers.send('event', category, action, label, value);
+
+				// if (form.target != '_blank') {
+				// 	ga.trackers.send('exception', {exDescription: 'Outgoing Link in same window'});
+				// }
+			}
+		}
+
+		let ct = this;
+		document.addEventListener('mousedown', add_link.bind(ct), false);
+		document.addEventListener('keyup', add_link.bind(ct), false);
+		document.addEventListener('submit', add_submission.bind(ct), false);
+	}
+
+	// Map copies of these methods to run for each tracker
+	Array('send', 'set').forEach(function (method) {
+		Computrack.prototype[method] = function() {
+			var args = Array.prototype.slice.call(arguments);
+			ga.getAll().forEach(function(tracker) {
+				tracker[method].apply(tracker, args);
+			})
+		}
+	})
+
+	Computrack.prototype.require = function() {
+		var args = Array.prototype.slice.call(arguments);
+		ga.getAll().forEach(function(tracker) {
+			var targs = args.slice(0);
+			targs.unshift(tracker.get('name') + '.require');
+			ga.apply(window, targs);
+		});
+	}
+
+	Computrack.prototype['promo'] = function() {
+		var args = Array.prototype.slice.call(arguments);
+		if (this.config.debug) {
+			console.log(args[0]);
+			console.table(args[1]);
+		}
+		ga.getAll().forEach(function(tracker) {
+			if (tracker.get('name') == 'computrack') return;
+			args[1].forEach(function(data) {
+				ga(tracker.get('name') + '.ec:addPromo', data);
+			});
+			if (args[0] == 'impression') {
+				// tracker.send.apply(tracker, ["event", "engagement", "view_promotion", "label", {nonInteraction: true}]);
+				tracker.send.apply(tracker, ["event", "engagement", "view_promotion", {nonInteraction: true}]);
+			} else { // interaction??
+				ga(tracker.get('name') + '.ec:setAction', 'promo_click');
+				// tracker.send.apply(tracker, ["event", "engagement", "select_content", "label"]);
+				tracker.send.apply(tracker, ["event", "engagement", "select_content"]);
+			}
+
+
+
+			// 	tracker.get('name') + 'ec:addPromo';
+			// 	tracker.send.apply(tracker, ["ec:addPromo", data]);
+			// var ec = tracker.plugins_.get('ec');
+			// args[1]
+			// console.log(args);
+			// debugger;
+			// tracker['promo'].apply(tracker, args);
+		})
+	}
+
+	// input is a full url or just a search parameter
+	// action 'remove' expects data is an array
+	// action 'replace' expects data is an object
+	// returns full url or just a new search parameter (with/without the leading '?' as appropriate)
+	Computrack.prototype.querystring = function(input, action, data) {
+		var items = [];
+		var anchor = null;
+		if (input.length > 0 && input.substr(0, 1) != '?') {
+			var anchor = document.createElement('a');
+			anchor.href = input;
+			input = anchor.search;
+		}
+		if (input.length > 0) {
+			items = input.substr(1).split('&');
+		}
+
+		switch (action) {
+			case 'remove':
+				items = items.filter(function(x) { return data.indexOf(x.split('=')[0]) == -1 });
+				break;
+			case 'replace':
+				items = items.filter(function(x) { return Object.keys(data).indexOf(x.split('=')[0]) == -1 });
+				items = items.concat(Object.keys(data).map(function(k) { return k + '=' + data[k]; }));
+		}
+		if (anchor == null) {
+			return items.length ? '?' + items.join('&') : '';
+		} else {
+			anchor.search = items.length ? '?' + items.join('&') : '';
+			return anchor.href;
+		}
+	}
+
+	ga('provide', 'computrack', Computrack);
+
+})();
