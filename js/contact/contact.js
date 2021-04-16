@@ -1,15 +1,27 @@
 let btn = document.querySelector('.btnSend');
 var emailfilter = /^[\w._-]+[+]?[\w._-]+@[\w.-]+\.[a-zA-Z]{2,6}$/;
 
+// function newPerson() {
+//         var dataPerson = localStorage.getItem('');
+//         dataPerson = dataPerson ? parseInt(dataPerson) : 0;
+//         var newPerson = dataPerson + 1;
+//         localStorage.setItem('', newPerson);
+//         return dataPerson;
+// }
+
 function newPerson() {
-        var next = localStorage.getItem('');
-        next = next ? parseInt(next) : 0;
-        var newPerson = next + 1;
-        localStorage.setItem('', newPerson);
-        return next;
+        var dataPerson = localStorage.getItem('Users');
+        dataPerson = dataPerson
+        if (parseInt(dataPerson)) {
+        } else {
+                dataPerson = 0;
+        }
+        var newPerson = ++dataPerson;
+        localStorage.setItem('Users', newPerson);
+        return dataPerson;
 }
 
-btn.addEventListener('click', function () {
+function dataPerson() {
         let result = document.querySelector('.message2');
         let fname = document.querySelector('.fname');
         let lname = document.querySelector('.lname');
@@ -25,10 +37,14 @@ btn.addEventListener('click', function () {
                 };
 
                 localStorage.setItem(newPerson(), JSON.stringify(person));
-
-                // localStorage.setItem('data', ` fname : ${fname.value} || lname : ${lname.value} || email : ${email.value} || message : ${textArea.value}`);
-                result.innerHTML = (`<div style="color : green; font-weight: 500; font-size: 18px;">Success</div>`);
+                result.innerHTML = (`<div class="container-fluid"
+                style="color : white; background-color:green; font-weight: 500; width:70%; font-size: 18px;">Success</div>`);
+                alert('We will get back to you soon thanks');
         } else {
-                result.innerHTML = (`<div style="color : rgba(255, 0, 0, 0.563); font-weight: 500; font-size: 18px;">Faild</div>`);
+                result.innerHTML = (`<div class="container-fluid" 
+                style="color : white; background-color:red; font-weight: 500; width:70%; font-size: 18px;">process unsuccessful</div>`);
+
         }
-});
+}
+
+btn.addEventListener('click', dataPerson);
