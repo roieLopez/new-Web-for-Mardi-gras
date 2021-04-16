@@ -12,8 +12,7 @@ var emailfilter = /^[\w._-]+[+]?[\w._-]+@[\w.-]+\.[a-zA-Z]{2,6}$/;
 function newPerson() {
         var dataPerson = localStorage.getItem('Users');
         dataPerson = dataPerson
-        if (parseInt(dataPerson)) {
-        } else {
+        if (parseInt(dataPerson)) {} else {
                 dataPerson = 0;
         }
         var newPerson = ++dataPerson;
@@ -24,14 +23,14 @@ function newPerson() {
 function dataPerson() {
         let result = document.querySelector('.message2');
         let fname = document.querySelector('.fname');
-        let lname = document.querySelector('.lname');
+        let phone = document.querySelector('.phone');
         let email = document.querySelector('.email');
         let textArea = document.querySelector('.message');
-        if (fname.value !== '' && lname.value !== '' && (emailfilter.test(email.value)) && textArea.value !== '' && fname.value.length >= 3 && lname.value.length >= 3 && email.value.length >= 3 && textArea.value.length >= 3) {
+        if (fname.value !== '' && phone.value !== '' && (emailfilter.test(email.value)) && textArea.value !== '' && fname.value.length >= 3 && phone.value.length >= 3 && email.value.length >= 3 && textArea.value.length >= 3) {
 
                 let person = {
                         firstName: fname.value,
-                        lastName: lname.value,
+                        lastName: phone.value,
                         email: email.value,
                         textArea: textArea.value
                 };
