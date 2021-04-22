@@ -458,7 +458,7 @@ body::-webkit-scrollbar-thumb:hover {
 @media (min-width: 1600px) and (max-width: 2129px) {
   .containerIframe iframe {
     height: 153vh;
-    width: 40vh;
+    width: 35vh;
   }
   .containerIframeRight iframe {
     height: 153vh;
