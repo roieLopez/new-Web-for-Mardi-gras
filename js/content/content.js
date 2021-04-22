@@ -4,9 +4,6 @@ $('.question').on('click', function () {
     $nextQuestion.slideToggle();
 });
 
-// let $p = $('.testd').text('');
-// console.log($p);
-// let $pval = text('1');
 let $input = $('.testd');
 console.log($input);
 $('.questionE').on('click', function () {
@@ -40,34 +37,34 @@ $('.questionE').on('click', function () {
 function submitAnswers() {
     var total = 3;
     var score = 0;
-    
+
     //Get user input
     var q1 = document.forms['quizForm']['q1'].value;
     var q2 = document.forms['quizForm']['q2'].value;
     var q3 = document.forms['quizForm']['q3'].value;
-    
+
     // Validation  
-    for(var i = 1; i <= total; i++) {
-      if(eval('q' + i) === null || eval('q' + i) == '' ) {
-        alert('You missed question ' + i);
-        return false;
-      }
+    for (var i = 1; i <= total; i++) {
+        if (eval('q' + i) === null || eval('q' + i) == '') {
+            alert('You missed question ' + i);
+            return false;
+        }
     }
-    
+
     // Set correct answers
-    var answers = ["c","d","a"];
-    
-    for(var i = 1; i <= total; i++) {
-      // Check answers
-      if (eval('q' + i) == answers[i - 1]) {
-        score++;
-      }
+    var answers = ["c", "d", "a"];
+
+    for (var i = 1; i <= total; i++) {
+        // Check answers
+        if (eval('q' + i) == answers[i - 1]) {
+            score++;
+        }
     }
-  
+
     // Display results
     var results = document.getElementById('results');
     results.innerHTML = '<h3>You scored <span style="color:#6453a6;">' + score + '</span> out of <span style="color:#6453a6">' + total + '</span></h3>';
     // alert('You scored ' + score + ' out of ' + total);
-    
+
     return false;
-  }
+}

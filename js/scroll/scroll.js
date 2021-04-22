@@ -1,4 +1,3 @@
-
 $(document).on('scroll', function () {
   // console.log($(this).scrollTop());
 
@@ -17,5 +16,3 @@ $(document).on('scroll', function () {
     $('.video').addClass('videoAnim');
   }
 });
-
-
